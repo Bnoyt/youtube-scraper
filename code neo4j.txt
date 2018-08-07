@@ -1,0 +1,67 @@
+LOAD CSV WITH HEADERS FROM "file:///export_users.csv" AS row 
+FIELDTERMINATOR ',' 
+CREATE (u:Tempuser) SET u=row;
+
+MATCH (u:Tempuser)
+WITH DISTINCT u.userId as userId, u.userName as userName
+CREATE (r:User) SET r.userId = userId;
+
+MATCH (u:Tempuser),(r:User)
+WHERE u.userId=r.userId
+SET r.userName = u.userName;
+
+
+LOAD CSV WITH HEADERS FROM "file:///export_videos.csv" AS row 
+FIELDTERMINATOR ',' 
+CREATE (v:Video) SET v=row;
+
+
+
+LOAD CSV WITH HEADERS FROM "file:///export_comments.csv" AS row 
+FIELDTERMINATOR ',' 
+CREATE (c:Comment) SET c=row;
+
+MATCH (u:Tempuser),(c:Comment)
+WHERE c.author_id = u.id
+SET c.userId=u.userId;
+
+MATCH (v:Video)
+WITH DISTINCT v.channelId as channelId
+CREATE (t:Tempuser) 
+SET t.userId=channelId;
+
+
+
+
+MATCH (u:User),(c:Comment)
+WHERE u.userId = c.userId
+CREATE (u)-[:hasWritten]->(c);
+
+
+
+MATCH (c:Comment),(v:Video)
+WHERE c.videoId = v.videoId
+CREATE (c)-[:commentToVideo]->(v);
+
+
+
+MATCH (c1:Comment),(c2:Comment)
+WHERE c1.parentCom_id = c2.id and NOT c1.parentCom_id = c1.id
+CREATE (c1)-[:repliesTo]->(c2);
+
+
+
+
+MATCH (u:User),(v:Video)
+WHERE u.userId = v.channelId
+CREATE (v)-[:videoPublishedBy]->(u);
+
+
+
+MATCH (u1:User)-[:hasWritten]->(:Comment)-[:repliesTo]->(:Comment)<-[:hasWritten]-(u2:User)
+CREATE (u1)-[l:link]->(u2)
+SET l.Weight=1;
+
+MATCH (u1:User)-[:hasWritten]->(:Comment)-[:commentToVideo]->(:Video)-[:videoPublishedBy]->(u2:User)
+CREATE (u1)-[l:link]->(u2)
+SET l.Weight=1;

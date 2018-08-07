@@ -1,0 +1,23 @@
+{
+	'kind': 'youtube#commentThread', 
+	'id': 'UgjkQhmDoZ7RfHgCoAEC', 
+	'snippet': {
+		'totalReplyCount': 1, 
+		'topLevelComment': {
+			'kind': 'youtube#comment',
+			'id': 'UgjkQhmDoZ7RfHgCoAEC', 
+			'snippet': {
+				'authorChannelUrl': 'http://www.youtube.com/channel/UCf9aeYU9AjhmluZdBWZaHOQ', 
+				'canRate': True, 
+				'authorDisplayName': 'MagicCow', 
+				'viewerRating': 'none', 
+				'authorProfileImageUrl': 'https://yt3.ggpht.com/-g11uYEZGZgg/AAAAAAAAAAI/AAAAAAAAAAA/l3Vrd4WNgzI/s28-c-k-no-mo-rj-c0xffffff/photo.jpg', 
+				'likeCount': 1, 
+				'textDisplay': "T'es français ?", 
+				'authorChannelId': {
+					'value': 'UCf9aeYU9AjhmluZdBWZaHOQ'
+				}, 
+				'videoId': 'Wccj9_s2Slc', 
+				'updatedAt': '2015-12-29T17:50:33.000Z', 
+				'publishedAt': '2015-12-29T17:50:33.000Z', 
+				'textOriginal': "T'es français ?"}, 'etag': '"XI7nbFXulYBIpL0ayR_gDh3eu1k/_aUA7LTWt0MjDXthBENMQgJLFMk"'}, 'videoId': 'Wccj9_s2Slc', 'canReply': True, 'isPublic': True}, 'etag': '"XI7nbFXulYBIpL0ayR_gDh3eu1k/aJ5vBHgoJm3_WjEtBeC9ry218uc"'}

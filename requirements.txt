@@ -1,0 +1,12 @@
+django==1.11
+requests
+psycopg2
+bs4
+isodate
+pandas
+numpy
+neo4jrestclient
+sklearn
+nltk
+spacy
+gensim

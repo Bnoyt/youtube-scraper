@@ -1,0 +1,256 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    Youtube scraper dashboard
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <!--<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">-->
+  <!-- CSS Files -->
+  <link href="{%static 'assets/css/bootstrap.min.css' %}" rel="stylesheet" />
+  <link href="{%static 'assets/css/now-ui-dashboard.css' %}" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="{%static 'assets/demo/demo.css' %}" rel="stylesheet" />
+
+  <link href="{%static 'assets/loading.css' %}" rel="stylesheet" />
+
+  
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="orange">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo">
+        <a class="simple-text logo-normal">
+          Youtube Scraper
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li class="active ">
+            <a href="{% url 'index' %}">
+              <i class="now-ui-icons design_app"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li class="">
+            <a href="{% url 'search' %}">
+              <i class="now-ui-icons design_app"></i>
+              <p>Recherche par mots-clés</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-transparent  navbar-absolute bg-primary fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="{% url 'index' %}"">Chaines les plus commentées</a>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <div class="panel-header panel-header-sm">
+      </div>
+      <div class="content">
+        
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-category">Chaines youtube sur écoute</h5>
+                <h4 class="card-title"> Statistiques détaillées</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead class=" text-primary">
+                      <th>
+                        Url
+                      </th>
+                      <th>
+                        Nom
+                      </th>
+                      <th>
+                        Nombre de vidéos étudiées
+                      </th>
+                      <th>
+                        Nombre de commentaires récupérés
+                      </th>
+                      <th>
+                        Nombre de features calculées
+                      </th>
+                      <th>
+                        État de la recherche
+                      </th>
+                    </thead>
+                    <tbody>
+                      {% for c in chaines %}
+                      <tr>
+                        <td>
+                          <a href="https://www.youtube.com/channel/{{c.channel.channelId}}" target="blank">https://www.youtube.com/channel/{{c.channel.channelId}}</a>
+                        </td>
+                        <td>
+                          {{c.channel.name}}
+                        </td>
+                        <td>
+                          {{c.nbvideos}}
+                        </td>
+                        <td>
+                          {{c.nbcomments}}
+                        </td>
+                        <td>
+                          {{c.nbliens}}
+                        </td>
+                        <td>
+
+                          <a class='btn btn-primary disabled' id="{{c.channel.channelId}}_l_s" aria-disabled="true" {% if c.channel.listening %}{% else %} style="display:none;"{% endif %}>Update en cours</a>
+                          <a class='btn btn-primary search_button' id="{{c.channel.channelId}}_l" href="{% url 'import' %}?channelId={{c.channel.channelId}}" {% if c.channel.listening %} style="display:none;" {% endif %}>Lancer une update</a>
+                        </td>
+
+                      
+                      </tr>
+                      {% endfor %}                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h5 class="card-category">Fonctions globales</h5>
+                  <h4 class="card-title">Calculs globaux</h4>
+                </div>
+                <div class="card-body">
+                  <a <a class='btn btn-primary search_button' id="truc" href="{% url 'delete_all' %}">Réinitialiser la base de données</a>
+
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="{%static 'assets/js/core/jquery.min.js' %}"></script>
+  <script src="{%static 'assets/js/core/popper.min.js' %}"></script>
+  <script src="{%static 'assets/js/core/bootstrap.min.js' %}"></script>
+  <script src="{%static 'assets/js/plugins/perfect-scrollbar.jquery.min.js' %}"></script>
+
+  <!-- Chart JS -->
+  <script src="{%static 'assets/js/plugins/chartjs.min.js' %}"></script>
+  <!--  Notifications Plugin    -->
+  <script src="{%static 'assets/js/plugins/bootstrap-notify.js' %}"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="{%static 'assets/js/now-ui-dashboard.min.js' %}" type="text/javascript"></script>
+
+
+
+  <script>
+    
+
+
+
+
+    function update_data(){
+      $.get("http://127.0.0.1:8000/datatab",retour_update);
+    }
+
+    function retour_update(reponse){
+
+      chaines=reponse.chaines
+      a = $("tr");
+      //console.log(a.length);
+      //console.log(chaines);
+      for(var i = 1; i < a.length;i=i+1){
+        var p = $(a[i]);
+        //console.log(a[i]);
+        var tds = p.find("td");
+        //console.log(chaines[i-1]["nbvideos"]);
+        $(tds[2]).text(chaines[i-1]["nbvideos"]);
+        $(tds[3]).text(chaines[i-1]["nbcomments"]);
+        $(tds[4]).text(chaines[i-1]["nbliens"]);
+        //console.log(tds);
+      }
+      setTimeout(update_data,1000);
+    };
+
+
+    update_data();
+
+
+
+
+  </script>
+
+
+
+
+  <script>
+
+    function retour_get(reponse){
+      console.log(reponse)
+      id = reponse.id;
+      $("#" + id + "_l_s").hide();
+      $("#" + id + "_l").show();
+      $("#" + id + "_l").click();
+      console.log("C'est parti mon kiki");
+      }
+
+
+
+    $(".search_button").click(function(event){
+        event.preventDefault();
+        $.get($(this).attr("href"),retour_get);
+        id = $(this).attr("id");
+
+        $(this).hide();
+        $("#" + id + "_s").show();
+
+        if(id == "truc"){
+          $(this).show();
+        };
+
+
+
+
+
+
+      });
+
+
+
+  </script>
+
+
+</body>
+
+</html>
