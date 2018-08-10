@@ -1,0 +1,32 @@
+{% load tags %}
+{% block topic %}
+
+<div class="col-md-12">
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-category">Représentation du topic en fonction des mots</h5>
+      <h4 class="card-title">Topic n°{{t.id}}</h4>
+    </div>
+     <div class="card-body">
+
+       {% for s in t.words %}
+
+        <div class="progress-container">
+          <span class="progress-badge">{{s.word}}</span>
+          <div class="progress">
+            <div class="progress-bar" role="progressbar" aria-valuenow="{{s.weight|get_percent_abs:t.max_weight}}" aria-valuemin="0" aria-valuemax="100" style="width: {{s.weight|get_percent_abs:t.max_weight}}%;">
+              <span class="progress-value">{{s.weight}}</span>
+            </div>
+          </div>
+        </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+
+
+
+
+{% endblock %}

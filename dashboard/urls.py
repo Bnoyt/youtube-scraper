@@ -16,5 +16,7 @@ urlpatterns = [
 	url(r'^save_search/$', views.save_search, name='save_search'),
 	url(r'^export_neo4j/$', views.export_neo4j, name='export_neo4j'),
 	url(r'^topics/$', views.detect_topics, name='detect_topics'),
+	url(r'^videotopics/$', views.detect_videotopics, name='detect_videotopics'),
+	url(r'^videosearch/$', views.videosearch, name='videosearch'),
 
 ]

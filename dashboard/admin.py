@@ -24,7 +24,7 @@ admin.site.unregister(Comment)
 admin.site.register(Comment, CommentAdmin)
 
 class VideoAdmin(admin.ModelAdmin):
-    list_display = ['title', 'videoId', 'channelId',"title","duration","viewCount","likeCount","publishedAt"]
+    list_display = ['title', 'videoId', 'channelId',"title","duration","viewCount","likeCount","publishedAt","commentCount"]
     search_fields = ['title']
 
 admin.site.unregister(Video)

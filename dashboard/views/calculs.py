@@ -302,7 +302,7 @@ def get_videos(publishedAfter=None,publishedBefore=None,channelId=None,location=
 
 def video(video_id):
 	r = requests.get("https://www.googleapis.com/youtube/v3/videos?key=" + getGoogleKey() + "&id="+video_id +   "&part=snippet,id,topicDetails,contentDetails,recordingDetails,statistics,status").json()
-	#print("https://www.googleapis.com/youtube/v3/videos?key=" + getGoogleKey() + "&id="+video_id +   "&part=snippet,id,topicDetails,contentDetails,recordingDetails,statistics,status")
+	print("https://www.googleapis.com/youtube/v3/videos?key=" + getGoogleKey() + "&id="+video_id +   "&part=snippet,id,topicDetails,contentDetails,recordingDetails,statistics,status")
 	return r
 
 
@@ -972,7 +972,16 @@ def importNeo4J(searchId):
 
 
 
-
+def lookForVideo(videoId):
+	b = Video.objects.filter(videoId=videoId).exists()
+	if b:
+		return True
+	else:
+		v = video(videoId)
+		channelId = v["items"][0]["snippet"]["channelId"]
+		result={"id":{"videoId":videoId}}
+		update_vid([result,channelId])
+		return True
 
 
 

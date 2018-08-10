@@ -235,6 +235,30 @@ def detect_topics(request):
 	args.columns=["videoId","description"]
 	print("Récupération des topics...")
 	topics = LDA_topicExtraction(args["description"])
+	topics = [format_topic(i) for i in topics]
 	context = { "search":search,
 				"topics":topics }
 	return render(request,"topics.html",context)
+
+def detect_videotopics(request):
+	video_id = request.GET['id']
+	a = lookForVideo(video_id)
+	video = get_object_or_404(Video,videoId=video_id)
+	print("Récupération des textes...")
+	with conection.cursor() as cursor:
+		cursor.execute("""SELECT "commentId","textDisplay" FROM dashboard_comment  WHERE "videoId"='{}' """.format(video_id))
+		row = cursor.fetchall()
+	args=pd.DataFrame(row)
+	args.columns=["commentId","textDisplay"]
+	print("Récupération des topics...")
+	a = LDA_topicExtraction(args["textDisplay"])
+	topics = [format_topic(i) for i in a]
+
+
+
+	context = { "video":video,
+				"topics":topics }
+	return render(request,"videotopics.html",context)
+
+def videosearch(request):
+	return render(request,"videosearch.html")

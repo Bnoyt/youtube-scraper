@@ -1,4 +1,5 @@
 {% load static %}
+{% load tags %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -45,13 +46,13 @@
               <p>Accueil</p>
             </a>
           </li>
-          <li class="active ">
+          <li class="">
             <a href="{% url 'search' %}">
               <i class="now-ui-icons design_app"></i>
               <p>Recherche par mots-clés</p>
             </a>
           </li>
-          <li class="">
+          <li class="active ">
             <a href="{% url 'videosearch' %}">
               <i class="now-ui-icons design_app"></i>
               <p>Analyse d'une vidéo</p>
@@ -72,12 +73,15 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="{% url 'index' %}"">Recherche "{{search.keywords}}" : </a>
+            <a class="navbar-brand" href="{% url 'index' %}"">Recherche "{{video.title}}" : </a>
           </div>
         </div>
       </nav>
       <!-- End Navbar -->
       <div class="panel-header panel-header-sm">
+
+
+
       </div>
       <div class="content">
         
@@ -86,6 +90,34 @@
 
 
         <div class="row">
+
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-header">
+                <h5 class="card-category">Recherche</h5>
+                <h4 class="card-title">Analyser une vidéo</h4>
+              </div>
+               <div class="card-body">
+                  
+                <form method="get" action="{% url 'detect_videotopics' %}">
+                    <div class="row">
+                    
+
+                      <div class="col-lg-12 col-sm-12">
+                        <label>Id de la vidéo à analyser</label>
+                        <input id="keywords" type="text" placeholder="Mots-clefs" name="id" class="form-control">
+                      </div>
+                     
+
+                        <button id="boutonrecherche" type="submit" value="Lancer la recherche" class="btn btn-primary">Lancer la recherche</button>
+                      
+                    </div>
+                </form>
+                       
+
+              </div>
+            </div>
+          </div>
 
 
           {% for s in topics %}
@@ -96,13 +128,6 @@
 
 
           {% endfor %}
-
-
-
-        </div>
-
-
-
 
 
 
@@ -136,45 +161,8 @@
 
   <script>
 
-    function retour_post(e){
-      console.log("Reherche finie");
+   
 
-    }
-
-
-
-
-    $("#boutonrecherche").click(function(event){
-        event.preventDefault();
-        keywords = $("#keywords").val();
-        date = $("#date").val();
-        nbvideos = $("#nbvideos").val()
-        crsftoken = $("[name='csrfmiddlewaretoken']").val();
-        $.post('{% url "ajout_search" %}',{csrfmiddlewaretoken:crsftoken,keywords:keywords,date:date,nbvideos:nbvideos},retour_post,'json');
-
-        notifier("Recherche ajoutée à la pile","success")
-        setTimeout(function(){location.reload();},1000);
-
-
-
-
-
-
-      });
-
-
-  function notifier(message,type){
-    $.notify({
-            message: message
-        },{
-            type: type,
-            timer: 100,
-            placement: {
-                from: 'top',
-                align: 'center'
-            }
-        });
-}
 
 
 
