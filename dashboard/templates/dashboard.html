@@ -42,7 +42,7 @@
           <li class="active ">
             <a href="{% url 'index' %}">
               <i class="now-ui-icons design_app"></i>
-              <p>Dashboard</p>
+              <p>Accueil</p>
             </a>
           </li>
           <li class="">
@@ -72,7 +72,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="{% url 'index' %}"">Chaines les plus commentées</a>
+            <a class="navbar-brand" href="{% url 'index' %}"">Tableau de Bord</a>
           </div>
         </div>
       </nav>
@@ -80,7 +80,7 @@
       <div class="panel-header panel-header-sm">
       </div>
       <div class="content">
-        
+        <!--
         <div class="row">
           <div class="col-md-12">
             <div class="card">
@@ -145,7 +145,7 @@
             </div>
           </div>
         </div>
-
+        -->
         <div class="row">
             <div class="col-md-12">
               <div class="card">
@@ -155,7 +155,8 @@
                 </div>
                 <div class="card-body">
                   <a <a class='btn btn-primary search_button' id="truc" href="{% url 'delete_all' %}">Réinitialiser la base de données</a>
-
+                  <a <a class='btn btn-primary' target="blank" href="http://localhost:7474/browser">Accès à Neo4J</a>
+                  <a <a class='btn btn-primary' target="blank" href="http://localhost:3000/">Accès à Linkurious</a>
                 </div>
               </div>
             </div>

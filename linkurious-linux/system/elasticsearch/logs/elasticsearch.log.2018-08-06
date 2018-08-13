@@ -1,0 +1,164 @@
+[2018-08-01 14:26:16,627][INFO ][node                     ] [Linkurious Index] version[1.4.5], pid[43983], build[2aaf797/2015-04-27T08:06:06Z]
+[2018-08-01 14:26:16,627][INFO ][node                     ] [Linkurious Index] initializing ...
+[2018-08-01 14:26:16,636][INFO ][plugins                  ] [Linkurious Index] loaded [], sites []
+[2018-08-01 14:26:18,826][INFO ][node                     ] [Linkurious Index] initialized
+[2018-08-01 14:26:18,827][INFO ][node                     ] [Linkurious Index] starting ...
+[2018-08-01 14:26:18,943][INFO ][transport                ] [Linkurious Index] bound_address {inet[/127.0.0.1:9301]}, publish_address {inet[/127.0.0.1:9301]}
+[2018-08-01 14:26:18,949][INFO ][discovery                ] [Linkurious Index] elasticsearch/qRvOdW5OQDq2lyL56tMWhA
+[2018-08-01 14:26:21,964][INFO ][cluster.service          ] [Linkurious Index] new_master [Linkurious Index][qRvOdW5OQDq2lyL56tMWhA][def-vlz-hdp-edgenode01][inet[/127.0.0.1:9301]]{max_local_storage_nodes=1, master=true}, reason: zen-disco-join (elected_as_master)
+[2018-08-01 14:26:22,034][INFO ][http                     ] [Linkurious Index] bound_address {inet[/127.0.0.1:9201]}, publish_address {inet[/127.0.0.1:9201]}
+[2018-08-01 14:26:22,034][INFO ][node                     ] [Linkurious Index] started
+[2018-08-01 14:26:22,374][INFO ][gateway                  ] [Linkurious Index] recovered [2] indices into cluster_state
+[2018-08-01 14:30:50,044][INFO ][node                     ] [Linkurious Index] stopping ...
+[2018-08-01 14:30:50,120][INFO ][node                     ] [Linkurious Index] stopped
+[2018-08-01 14:30:50,121][INFO ][node                     ] [Linkurious Index] closing ...
+[2018-08-01 14:30:50,126][INFO ][node                     ] [Linkurious Index] closed
+[2018-08-01 14:31:31,500][INFO ][node                     ] [Linkurious Index] version[1.4.5], pid[47953], build[2aaf797/2015-04-27T08:06:06Z]
+[2018-08-01 14:31:31,501][INFO ][node                     ] [Linkurious Index] initializing ...
+[2018-08-01 14:31:31,503][INFO ][plugins                  ] [Linkurious Index] loaded [], sites []
+[2018-08-01 14:31:33,130][INFO ][node                     ] [Linkurious Index] initialized
+[2018-08-01 14:31:33,130][INFO ][node                     ] [Linkurious Index] starting ...
+[2018-08-01 14:31:33,279][INFO ][transport                ] [Linkurious Index] bound_address {inet[/127.0.0.1:9301]}, publish_address {inet[/127.0.0.1:9301]}
+[2018-08-01 14:31:33,286][INFO ][discovery                ] [Linkurious Index] elasticsearch/Ox2jpsTITK2ddqcK1n3JTA
+[2018-08-01 14:31:36,299][INFO ][cluster.service          ] [Linkurious Index] new_master [Linkurious Index][Ox2jpsTITK2ddqcK1n3JTA][def-vlz-hdp-edgenode01][inet[/127.0.0.1:9301]]{max_local_storage_nodes=1, master=true}, reason: zen-disco-join (elected_as_master)
+[2018-08-01 14:31:36,362][INFO ][http                     ] [Linkurious Index] bound_address {inet[/127.0.0.1:9201]}, publish_address {inet[/127.0.0.1:9201]}
+[2018-08-01 14:31:36,362][INFO ][node                     ] [Linkurious Index] started
+[2018-08-01 14:31:36,653][INFO ][gateway                  ] [Linkurious Index] recovered [2] indices into cluster_state
+[2018-08-06 10:56:55,767][INFO ][node                     ] [Linkurious Index] version[1.4.5], pid[4419], build[2aaf797/2015-04-27T08:06:06Z]
+[2018-08-06 10:56:55,769][INFO ][node                     ] [Linkurious Index] initializing ...
+[2018-08-06 10:56:55,781][INFO ][plugins                  ] [Linkurious Index] loaded [], sites []
+[2018-08-06 10:57:03,691][INFO ][node                     ] [Linkurious Index] initialized
+[2018-08-06 10:57:03,714][INFO ][node                     ] [Linkurious Index] starting ...
+[2018-08-06 10:57:04,397][INFO ][transport                ] [Linkurious Index] bound_address {inet[/127.0.0.1:9301]}, publish_address {inet[/127.0.0.1:9301]}
+[2018-08-06 10:57:04,457][INFO ][discovery                ] [Linkurious Index] elasticsearch/3mqZ0IyVS8mQXbvUDRhleg
+[2018-08-06 10:57:07,845][INFO ][cluster.service          ] [Linkurious Index] new_master [Linkurious Index][3mqZ0IyVS8mQXbvUDRhleg][vagrant][inet[/127.0.0.1:9301]]{max_local_storage_nodes=1, master=true}, reason: zen-disco-join (elected_as_master)
+[2018-08-06 10:57:07,928][INFO ][http                     ] [Linkurious Index] bound_address {inet[/127.0.0.1:9201]}, publish_address {inet[/127.0.0.1:9201]}
+[2018-08-06 10:57:07,929][INFO ][node                     ] [Linkurious Index] started
+[2018-08-06 10:57:09,537][INFO ][gateway                  ] [Linkurious Index] recovered [2] indices into cluster_state
+[2018-08-06 10:59:12,396][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_4385412e] creating index, cause [api], shards [1]/[0], mappings [_default_, node, edge]
+[2018-08-06 10:59:22,747][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_4385412e] update_mapping [node] (dynamic)
+[2018-08-06 11:02:59,132][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_4385412e] update_mapping [node] (dynamic)
+[2018-08-06 11:02:59,411][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_4385412e] update_mapping [node] (dynamic)
+[2018-08-06 11:02:59,852][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_4385412e] update_mapping [node] (dynamic)
+[2018-08-06 11:08:07,140][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_4385412e] update_mapping [edge] (dynamic)
+[2018-08-06 11:11:06,967][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_4385412e] update_mapping [edge] (dynamic)
+[2018-08-06 12:20:04,776][INFO ][node                     ] [Linkurious Index] stopping ...
+[2018-08-06 12:20:05,449][INFO ][node                     ] [Linkurious Index] stopped
+[2018-08-06 12:20:05,450][INFO ][node                     ] [Linkurious Index] closing ...
+[2018-08-06 12:20:05,517][INFO ][node                     ] [Linkurious Index] closed
+[2018-08-06 12:21:52,866][INFO ][node                     ] [Linkurious Index] version[1.4.5], pid[3048], build[2aaf797/2015-04-27T08:06:06Z]
+[2018-08-06 12:21:52,867][INFO ][node                     ] [Linkurious Index] initializing ...
+[2018-08-06 12:21:52,877][INFO ][plugins                  ] [Linkurious Index] loaded [], sites []
+[2018-08-06 12:21:59,851][INFO ][node                     ] [Linkurious Index] initialized
+[2018-08-06 12:21:59,858][INFO ][node                     ] [Linkurious Index] starting ...
+[2018-08-06 12:22:00,273][INFO ][transport                ] [Linkurious Index] bound_address {inet[/127.0.0.1:9301]}, publish_address {inet[/127.0.0.1:9301]}
+[2018-08-06 12:22:00,313][INFO ][discovery                ] [Linkurious Index] elasticsearch/sHh8VRg8RBanZWg5gUZ32w
+[2018-08-06 12:22:03,539][INFO ][cluster.service          ] [Linkurious Index] new_master [Linkurious Index][sHh8VRg8RBanZWg5gUZ32w][vagrant][inet[/127.0.0.1:9301]]{max_local_storage_nodes=1, master=true}, reason: zen-disco-join (elected_as_master)
+[2018-08-06 12:22:03,615][INFO ][http                     ] [Linkurious Index] bound_address {inet[/127.0.0.1:9201]}, publish_address {inet[/127.0.0.1:9201]}
+[2018-08-06 12:22:03,615][INFO ][node                     ] [Linkurious Index] started
+[2018-08-06 12:22:04,847][INFO ][gateway                  ] [Linkurious Index] recovered [3] indices into cluster_state
+[2018-08-06 12:27:14,743][INFO ][node                     ] [Linkurious Index] stopping ...
+[2018-08-06 12:27:14,888][INFO ][node                     ] [Linkurious Index] stopped
+[2018-08-06 12:27:14,888][INFO ][node                     ] [Linkurious Index] closing ...
+[2018-08-06 12:27:14,896][INFO ][node                     ] [Linkurious Index] closed
+[2018-08-06 12:29:08,765][INFO ][node                     ] [Linkurious Index] version[1.4.5], pid[3480], build[2aaf797/2015-04-27T08:06:06Z]
+[2018-08-06 12:29:08,768][INFO ][node                     ] [Linkurious Index] initializing ...
+[2018-08-06 12:29:08,780][INFO ][plugins                  ] [Linkurious Index] loaded [], sites []
+[2018-08-06 12:29:16,167][INFO ][node                     ] [Linkurious Index] initialized
+[2018-08-06 12:29:16,167][INFO ][node                     ] [Linkurious Index] starting ...
+[2018-08-06 12:29:16,580][INFO ][transport                ] [Linkurious Index] bound_address {inet[/127.0.0.1:9301]}, publish_address {inet[/127.0.0.1:9301]}
+[2018-08-06 12:29:16,607][INFO ][discovery                ] [Linkurious Index] elasticsearch/aCyhPRhNSEuQzHtf8wszAQ
+[2018-08-06 12:29:19,841][INFO ][cluster.service          ] [Linkurious Index] new_master [Linkurious Index][aCyhPRhNSEuQzHtf8wszAQ][vagrant][inet[/127.0.0.1:9301]]{max_local_storage_nodes=1, master=true}, reason: zen-disco-join (elected_as_master)
+[2018-08-06 12:29:19,905][INFO ][http                     ] [Linkurious Index] bound_address {inet[/127.0.0.1:9201]}, publish_address {inet[/127.0.0.1:9201]}
+[2018-08-06 12:29:19,905][INFO ][node                     ] [Linkurious Index] started
+[2018-08-06 12:29:21,564][INFO ][gateway                  ] [Linkurious Index] recovered [3] indices into cluster_state
+[2018-08-06 12:32:16,875][INFO ][node                     ] [Linkurious Index] stopping ...
+[2018-08-06 12:32:17,012][INFO ][node                     ] [Linkurious Index] stopped
+[2018-08-06 12:32:17,013][INFO ][node                     ] [Linkurious Index] closing ...
+[2018-08-06 12:32:17,024][INFO ][node                     ] [Linkurious Index] closed
+[2018-08-06 13:52:54,962][INFO ][node                     ] [Linkurious Index] version[1.4.5], pid[3203], build[2aaf797/2015-04-27T08:06:06Z]
+[2018-08-06 13:52:54,964][INFO ][node                     ] [Linkurious Index] initializing ...
+[2018-08-06 13:52:54,992][INFO ][plugins                  ] [Linkurious Index] loaded [], sites []
+[2018-08-06 13:53:03,547][INFO ][node                     ] [Linkurious Index] initialized
+[2018-08-06 13:53:03,549][INFO ][node                     ] [Linkurious Index] starting ...
+[2018-08-06 13:53:04,048][INFO ][transport                ] [Linkurious Index] bound_address {inet[/127.0.0.1:9301]}, publish_address {inet[/127.0.0.1:9301]}
+[2018-08-06 13:53:04,085][INFO ][discovery                ] [Linkurious Index] elasticsearch/LKEldRm5TSeqpBp_wywY3w
+[2018-08-06 13:53:07,467][INFO ][cluster.service          ] [Linkurious Index] new_master [Linkurious Index][LKEldRm5TSeqpBp_wywY3w][vagrant][inet[/127.0.0.1:9301]]{max_local_storage_nodes=1, master=true}, reason: zen-disco-join (elected_as_master)
+[2018-08-06 13:53:07,518][INFO ][http                     ] [Linkurious Index] bound_address {inet[/127.0.0.1:9201]}, publish_address {inet[/127.0.0.1:9201]}
+[2018-08-06 13:53:07,518][INFO ][node                     ] [Linkurious Index] started
+[2018-08-06 13:53:08,413][INFO ][gateway                  ] [Linkurious Index] recovered [3] indices into cluster_state
+[2018-08-06 13:53:15,914][INFO ][node                     ] [Linkurious Index] stopping ...
+[2018-08-06 13:53:16,186][WARN ][netty.channel.DefaultChannelPipeline] An exception was thrown by an exception handler.
+java.util.concurrent.RejectedExecutionException: Worker has already been shutdown
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.registerTask(AbstractNioSelector.java:120)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:72)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:56)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioChannelSink.execute(AbstractNioChannelSink.java:34)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.execute(DefaultChannelPipeline.java:636)
+	at org.elasticsearch.common.netty.channel.Channels.fireExceptionCaughtLater(Channels.java:496)
+	at org.elasticsearch.common.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:46)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.notifyHandlerException(DefaultChannelPipeline.java:658)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:781)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:725)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.doEncode(OneToOneEncoder.java:71)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:59)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:784)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.handleDownstream(HttpPipeliningHandler.java:87)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:582)
+	at org.elasticsearch.http.netty.NettyHttpChannel.sendResponse(NettyHttpChannel.java:199)
+	at org.elasticsearch.rest.action.support.RestResponseListener.processResponse(RestResponseListener.java:43)
+	at org.elasticsearch.rest.action.support.RestActionListener.onResponse(RestActionListener.java:49)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction.finishHim(TransportBroadcastOperationAction.java:252)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction.onOperation(TransportBroadcastOperationAction.java:216)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2018-08-06 13:53:16,217][INFO ][node                     ] [Linkurious Index] stopped
+[2018-08-06 13:53:16,217][INFO ][node                     ] [Linkurious Index] closing ...
+[2018-08-06 13:53:16,218][WARN ][netty.channel.DefaultChannelPipeline] An exception was thrown by an exception handler.
+java.util.concurrent.RejectedExecutionException: Worker has already been shutdown
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioSelector.registerTask(AbstractNioSelector.java:120)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:72)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioWorker.executeInIoThread(AbstractNioWorker.java:56)
+	at org.elasticsearch.common.netty.channel.socket.nio.NioWorker.executeInIoThread(NioWorker.java:36)
+	at org.elasticsearch.common.netty.channel.socket.nio.AbstractNioChannelSink.execute(AbstractNioChannelSink.java:34)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.execute(DefaultChannelPipeline.java:636)
+	at org.elasticsearch.common.netty.channel.Channels.fireExceptionCaughtLater(Channels.java:496)
+	at org.elasticsearch.common.netty.channel.AbstractChannelSink.exceptionCaught(AbstractChannelSink.java:46)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.notifyHandlerException(DefaultChannelPipeline.java:658)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:781)
+	at org.elasticsearch.common.netty.channel.Channels.write(Channels.java:725)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.doEncode(OneToOneEncoder.java:71)
+	at org.elasticsearch.common.netty.handler.codec.oneone.OneToOneEncoder.handleDownstream(OneToOneEncoder.java:59)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendDownstream(DefaultChannelPipeline.java:784)
+	at org.elasticsearch.http.netty.pipelining.HttpPipeliningHandler.handleDownstream(HttpPipeliningHandler.java:87)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:591)
+	at org.elasticsearch.common.netty.channel.DefaultChannelPipeline.sendDownstream(DefaultChannelPipeline.java:582)
+	at org.elasticsearch.http.netty.NettyHttpChannel.sendResponse(NettyHttpChannel.java:199)
+	at org.elasticsearch.rest.action.support.RestResponseListener.processResponse(RestResponseListener.java:43)
+	at org.elasticsearch.rest.action.support.RestActionListener.onResponse(RestActionListener.java:49)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction.finishHim(TransportBroadcastOperationAction.java:252)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction.onOperation(TransportBroadcastOperationAction.java:216)
+	at org.elasticsearch.action.support.broadcast.TransportBroadcastOperationAction$AsyncBroadcastAction$1.run(TransportBroadcastOperationAction.java:171)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+[2018-08-06 13:53:16,230][INFO ][node                     ] [Linkurious Index] closed
+[2018-08-06 13:53:57,401][INFO ][node                     ] [Linkurious Index] version[1.4.5], pid[3771], build[2aaf797/2015-04-27T08:06:06Z]
+[2018-08-06 13:53:57,403][INFO ][node                     ] [Linkurious Index] initializing ...
+[2018-08-06 13:53:57,411][INFO ][plugins                  ] [Linkurious Index] loaded [], sites []
+[2018-08-06 13:54:04,244][INFO ][node                     ] [Linkurious Index] initialized
+[2018-08-06 13:54:04,258][INFO ][node                     ] [Linkurious Index] starting ...
+[2018-08-06 13:54:04,791][INFO ][transport                ] [Linkurious Index] bound_address {inet[/127.0.0.1:9301]}, publish_address {inet[/127.0.0.1:9301]}
+[2018-08-06 13:54:04,826][INFO ][discovery                ] [Linkurious Index] elasticsearch/f7PkgIvCSP6UZKabVg7_0Q
+[2018-08-06 13:54:08,151][INFO ][cluster.service          ] [Linkurious Index] new_master [Linkurious Index][f7PkgIvCSP6UZKabVg7_0Q][vagrant][inet[/127.0.0.1:9301]]{max_local_storage_nodes=1, master=true}, reason: zen-disco-join (elected_as_master)
+[2018-08-06 13:54:08,223][INFO ][http                     ] [Linkurious Index] bound_address {inet[/127.0.0.1:9201]}, publish_address {inet[/127.0.0.1:9201]}
+[2018-08-06 13:54:08,225][INFO ][node                     ] [Linkurious Index] started
+[2018-08-06 13:54:09,542][INFO ][gateway                  ] [Linkurious Index] recovered [3] indices into cluster_state

@@ -1,0 +1,398 @@
+[2018-04-16 14:18:32,121][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_3a1b9dd9] creating index, cause [api], shards [1]/[0], mappings [_default_, node, edge]
+[2018-04-16 14:18:41,977][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_3a1b9dd9] update_mapping [node] (dynamic)
+[2018-04-16 14:22:16,457][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_3a1b9dd9] update_mapping [node] (dynamic)
+[2018-04-16 14:24:08,643][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_3a1b9dd9] update_mapping [node] (dynamic)
+[2018-04-16 14:24:08,669][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_3a1b9dd9] update_mapping [node] (dynamic)
+[2018-04-16 15:07:46,017][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_3a1b9dd9] update_mapping [edge] (dynamic)
+[2018-04-16 17:52:42,408][DEBUG][action.search.type       ] [Linkurious Index] [linkurious_3a1b9dd9][0], node[hHEO-FilSu2b1DqRTxIFYQ], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@1143e588]
+org.elasticsearch.search.SearchParseException: [linkurious_3a1b9dd9][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"highlight":{"fields":{"*":{"pre_tags":["[match]"],"post_tags":["[/match]"],"encoder":"default"}}},"query":{"filtered":{"query":{"query_string":{"query":"Fernando Savater: \"Lo de Cataluña es la revolución de los paletos\" http://www.tiempodehoy.com/ultimas-","fuzziness":0.6}},"filter":{"and":[{"term":{"_type":"node"}}]}}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:356)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:333)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:330)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [linkurious_3a1b9dd9] Failed to parse query [Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultimas-]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:243)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:382)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:276)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:671)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultimas-': Lexical error at line 1, column 103.  Encountered: <EOF> after : "/ultimas-"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:137)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:884)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:226)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 103.  Encountered: <EOF> after : "/ultimas-"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1133)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:601)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:484)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:491)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:477)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:228)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:214)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:172)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:127)
+	... 19 more
+[2018-04-16 17:52:42,420][DEBUG][action.search.type       ] [Linkurious Index] All shards failed for phase: [query_fetch]
+org.elasticsearch.search.SearchParseException: [linkurious_3a1b9dd9][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"highlight":{"fields":{"*":{"pre_tags":["[match]"],"post_tags":["[/match]"],"encoder":"default"}}},"query":{"filtered":{"query":{"query_string":{"query":"Fernando Savater: \"Lo de Cataluña es la revolución de los paletos\" http://www.tiempodehoy.com/ultimas-","fuzziness":0.6}},"filter":{"and":[{"term":{"_type":"node"}}]}}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:356)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:333)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:330)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [linkurious_3a1b9dd9] Failed to parse query [Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultimas-]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:243)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:382)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:276)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:671)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultimas-': Lexical error at line 1, column 103.  Encountered: <EOF> after : "/ultimas-"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:137)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:884)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:226)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 103.  Encountered: <EOF> after : "/ultimas-"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1133)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:601)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:484)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:491)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:477)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:228)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:214)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:172)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:127)
+	... 19 more
+[2018-04-16 17:52:46,839][DEBUG][action.search.type       ] [Linkurious Index] [linkurious_3a1b9dd9][0], node[hHEO-FilSu2b1DqRTxIFYQ], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@7b9f53d5]
+org.elasticsearch.search.SearchParseException: [linkurious_3a1b9dd9][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"highlight":{"fields":{"*":{"pre_tags":["[match]"],"post_tags":["[/match]"],"encoder":"default"}}},"query":{"filtered":{"query":{"query_string":{"query":"Fernando Savater: \"Lo de Cataluña es la revolución de los paletos\" http://www.tiempodehoy.com/ultima","fuzziness":0.6}},"filter":{"and":[{"term":{"_type":"node"}}]}}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:356)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:333)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:330)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [linkurious_3a1b9dd9] Failed to parse query [Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultima]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:243)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:382)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:276)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:671)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultima': Lexical error at line 1, column 101.  Encountered: <EOF> after : "/ultima"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:137)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:884)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:226)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 101.  Encountered: <EOF> after : "/ultima"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1133)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:601)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:484)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:491)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:477)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:228)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:214)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:172)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:127)
+	... 19 more
+[2018-04-16 17:52:46,839][DEBUG][action.search.type       ] [Linkurious Index] All shards failed for phase: [query_fetch]
+org.elasticsearch.search.SearchParseException: [linkurious_3a1b9dd9][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"highlight":{"fields":{"*":{"pre_tags":["[match]"],"post_tags":["[/match]"],"encoder":"default"}}},"query":{"filtered":{"query":{"query_string":{"query":"Fernando Savater: \"Lo de Cataluña es la revolución de los paletos\" http://www.tiempodehoy.com/ultima","fuzziness":0.6}},"filter":{"and":[{"term":{"_type":"node"}}]}}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:356)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:333)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:330)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [linkurious_3a1b9dd9] Failed to parse query [Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultima]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:243)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:382)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:276)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:671)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultima': Lexical error at line 1, column 101.  Encountered: <EOF> after : "/ultima"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:137)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:884)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:226)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 101.  Encountered: <EOF> after : "/ultima"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1133)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:601)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:484)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:491)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:477)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:228)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:214)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:172)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:127)
+	... 19 more
+[2018-04-16 17:52:47,136][DEBUG][action.search.type       ] [Linkurious Index] [linkurious_3a1b9dd9][0], node[hHEO-FilSu2b1DqRTxIFYQ], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@442a8acd]
+org.elasticsearch.search.SearchParseException: [linkurious_3a1b9dd9][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"highlight":{"fields":{"*":{"pre_tags":["[match]"],"post_tags":["[/match]"],"encoder":"default"}}},"query":{"filtered":{"query":{"query_string":{"query":"Fernando Savater: \"Lo de Cataluña es la revolución de los paletos\" http://www.tiempodehoy.com/ulti","fuzziness":0.6}},"filter":{"and":[{"term":{"_type":"node"}}]}}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:356)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:333)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:330)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [linkurious_3a1b9dd9] Failed to parse query [Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ulti]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:243)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:382)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:276)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:671)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ulti': Lexical error at line 1, column 99.  Encountered: <EOF> after : "/ulti"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:137)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:884)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:226)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 99.  Encountered: <EOF> after : "/ulti"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1133)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:601)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:484)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:491)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:477)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:228)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:214)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:172)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:127)
+	... 19 more
+[2018-04-16 17:52:47,137][DEBUG][action.search.type       ] [Linkurious Index] All shards failed for phase: [query_fetch]
+org.elasticsearch.search.SearchParseException: [linkurious_3a1b9dd9][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"highlight":{"fields":{"*":{"pre_tags":["[match]"],"post_tags":["[/match]"],"encoder":"default"}}},"query":{"filtered":{"query":{"query_string":{"query":"Fernando Savater: \"Lo de Cataluña es la revolución de los paletos\" http://www.tiempodehoy.com/ulti","fuzziness":0.6}},"filter":{"and":[{"term":{"_type":"node"}}]}}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:356)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:333)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:330)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [linkurious_3a1b9dd9] Failed to parse query [Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ulti]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:243)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:382)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:276)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:671)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ulti': Lexical error at line 1, column 99.  Encountered: <EOF> after : "/ulti"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:137)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:884)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:226)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 99.  Encountered: <EOF> after : "/ulti"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1133)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:601)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:484)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:491)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:477)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:228)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:214)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:172)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:127)
+	... 19 more
+[2018-04-16 17:52:47,438][DEBUG][action.search.type       ] [Linkurious Index] [linkurious_3a1b9dd9][0], node[hHEO-FilSu2b1DqRTxIFYQ], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@bd631d]
+org.elasticsearch.search.SearchParseException: [linkurious_3a1b9dd9][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"highlight":{"fields":{"*":{"pre_tags":["[match]"],"post_tags":["[/match]"],"encoder":"default"}}},"query":{"filtered":{"query":{"query_string":{"query":"Fernando Savater: \"Lo de Cataluña es la revolución de los paletos\" http://www.tiempodehoy.com/ult","fuzziness":0.6}},"filter":{"and":[{"term":{"_type":"node"}}]}}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:356)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:333)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:330)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [linkurious_3a1b9dd9] Failed to parse query [Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ult]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:243)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:382)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:276)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:671)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ult': Lexical error at line 1, column 98.  Encountered: <EOF> after : "/ult"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:137)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:884)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:226)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 98.  Encountered: <EOF> after : "/ult"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1133)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:601)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:484)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:491)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:477)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:228)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:214)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:172)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:127)
+	... 19 more
+[2018-04-16 17:52:47,439][DEBUG][action.search.type       ] [Linkurious Index] All shards failed for phase: [query_fetch]
+org.elasticsearch.search.SearchParseException: [linkurious_3a1b9dd9][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"highlight":{"fields":{"*":{"pre_tags":["[match]"],"post_tags":["[/match]"],"encoder":"default"}}},"query":{"filtered":{"query":{"query_string":{"query":"Fernando Savater: \"Lo de Cataluña es la revolución de los paletos\" http://www.tiempodehoy.com/ult","fuzziness":0.6}},"filter":{"and":[{"term":{"_type":"node"}}]}}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:356)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:333)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:330)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [linkurious_3a1b9dd9] Failed to parse query [Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ult]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:243)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:382)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:276)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:671)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ult': Lexical error at line 1, column 98.  Encountered: <EOF> after : "/ult"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:137)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:884)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:226)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 98.  Encountered: <EOF> after : "/ult"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1133)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:601)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:484)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:491)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:477)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:228)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:214)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:172)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:127)
+	... 19 more
+[2018-04-16 17:52:53,437][DEBUG][action.search.type       ] [Linkurious Index] [linkurious_3a1b9dd9][0], node[hHEO-FilSu2b1DqRTxIFYQ], [P], s[STARTED]: Failed to execute [org.elasticsearch.action.search.SearchRequest@51e48a62]
+org.elasticsearch.search.SearchParseException: [linkurious_3a1b9dd9][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"highlight":{"fields":{"*":{"pre_tags":["[match]"],"post_tags":["[/match]"],"encoder":"default"}}},"query":{"filtered":{"query":{"query_string":{"query":"Fernando Savater: \"Lo de Cataluña es la revolución de los paletos\" http://www.tiempodehoy.com/ultimas-","fuzziness":0.6}},"filter":{"and":[{"term":{"_type":"node"}}]}}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:356)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:333)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:330)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [linkurious_3a1b9dd9] Failed to parse query [Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultimas-]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:243)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:382)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:276)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:671)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultimas-': Lexical error at line 1, column 103.  Encountered: <EOF> after : "/ultimas-"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:137)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:884)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:226)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 103.  Encountered: <EOF> after : "/ultimas-"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1133)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:601)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:484)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:491)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:477)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:228)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:214)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:172)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:127)
+	... 19 more
+[2018-04-16 17:52:53,438][DEBUG][action.search.type       ] [Linkurious Index] All shards failed for phase: [query_fetch]
+org.elasticsearch.search.SearchParseException: [linkurious_3a1b9dd9][0]: from[-1],size[-1]: Parse Failure [Failed to parse source [{"highlight":{"fields":{"*":{"pre_tags":["[match]"],"post_tags":["[/match]"],"encoder":"default"}}},"query":{"filtered":{"query":{"query_string":{"query":"Fernando Savater: \"Lo de Cataluña es la revolución de los paletos\" http://www.tiempodehoy.com/ultimas-","fuzziness":0.6}},"filter":{"and":[{"term":{"_type":"node"}}]}}}}]]
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:687)
+	at org.elasticsearch.search.SearchService.createContext(SearchService.java:543)
+	at org.elasticsearch.search.SearchService.createAndPutContext(SearchService.java:515)
+	at org.elasticsearch.search.SearchService.executeFetchPhase(SearchService.java:356)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:333)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$11.call(SearchServiceTransportAction.java:330)
+	at org.elasticsearch.search.action.SearchServiceTransportAction$23.run(SearchServiceTransportAction.java:559)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.elasticsearch.index.query.QueryParsingException: [linkurious_3a1b9dd9] Failed to parse query [Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultimas-]
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:243)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.FilteredQueryParser.parse(FilteredQueryParser.java:71)
+	at org.elasticsearch.index.query.QueryParseContext.parseInnerQuery(QueryParseContext.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.innerParse(IndexQueryParserService.java:382)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:281)
+	at org.elasticsearch.index.query.IndexQueryParserService.parse(IndexQueryParserService.java:276)
+	at org.elasticsearch.search.query.QueryParseElement.parse(QueryParseElement.java:33)
+	at org.elasticsearch.search.SearchService.parseSource(SearchService.java:671)
+	... 9 more
+Caused by: org.apache.lucene.queryparser.classic.ParseException: Cannot parse 'Fernando Savater: "Lo de Cataluña es la revolución de los paletos" http://www.tiempodehoy.com/ultimas-': Lexical error at line 1, column 103.  Encountered: <EOF> after : "/ultimas-"
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:137)
+	at org.apache.lucene.queryparser.classic.MapperQueryParser.parse(MapperQueryParser.java:884)
+	at org.elasticsearch.index.query.QueryStringQueryParser.parse(QueryStringQueryParser.java:226)
+	... 17 more
+Caused by: org.apache.lucene.queryparser.classic.TokenMgrError: Lexical error at line 1, column 103.  Encountered: <EOF> after : "/ultimas-"
+	at org.apache.lucene.queryparser.classic.QueryParserTokenManager.getNextToken(QueryParserTokenManager.java:1133)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_scan_token(QueryParser.java:601)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3R_2(QueryParser.java:484)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_3_1(QueryParser.java:491)
+	at org.apache.lucene.queryparser.classic.QueryParser.jj_2_1(QueryParser.java:477)
+	at org.apache.lucene.queryparser.classic.QueryParser.Clause(QueryParser.java:228)
+	at org.apache.lucene.queryparser.classic.QueryParser.Query(QueryParser.java:214)
+	at org.apache.lucene.queryparser.classic.QueryParser.TopLevelQuery(QueryParser.java:172)
+	at org.apache.lucene.queryparser.classic.QueryParserBase.parse(QueryParserBase.java:127)
+	... 19 more
+[2018-04-16 18:44:48,810][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_3a1b9dd9] update_mapping [node] (dynamic)
+[2018-04-16 18:46:36,564][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_3a1b9dd9] update_mapping [node] (dynamic)

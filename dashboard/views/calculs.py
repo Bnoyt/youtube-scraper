@@ -12,7 +12,7 @@ from django.db import connection as conection
 
 import django.db as db
 
-from networkit.graph import *
+#from networkit.graph import *
  
 from os import chdir
 

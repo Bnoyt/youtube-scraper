@@ -1,0 +1,68 @@
+2018-02-12 11:13:59.658 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-02-12 11:14:00.031 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-02-12 11:14:00.032 INFO Launching manager (service:false from-service:undefined)
+2018-02-12 11:38:19.857 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-02-12 11:38:20.226 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-02-12 11:38:20.227 INFO Launching manager (service:false from-service:undefined)
+2018-08-01 14:26:13.587 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-01 14:26:13.986 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-01 14:26:13.987 INFO Launching manager (service:false from-service:undefined)
+2018-08-01 14:31:01.823 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-01 14:31:05.528 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-01 14:31:05.537 INFO Installing as a system service ({"label":"linkurious","name":"Linkurious","description":"http://linkurio.us","node_path":"/home/xvt/linkurious-linux/system/node","ppm_client_path":"/home/xvt/linkurious-linux/system/node_modules/pattypm/bin/client.js","ppm_server_path":"/home/xvt/linkurious-linux/system/node_modules/pattypm/bin/server.js","ppm_config_path":"/home/xvt/linkurious-linux/data/manager/manager.json","ppm_home_path":"/home/xvt/linkurious-linux/data/manager","username":""})...
+2018-08-01 14:31:18.579 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-01 14:31:21.051 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-01 14:31:29.078 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-01 14:31:29.447 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-01 14:31:29.447 INFO Launching manager (service:false from-service:undefined)
+2018-08-06 10:56:51.461 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-06 10:56:51.891 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-06 10:56:51.893 INFO Launching manager (service:false from-service:undefined)
+2018-08-06 12:21:48.522 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-06 12:21:49.134 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-06 12:21:49.136 INFO Launching manager (service:false from-service:undefined)
+2018-08-06 12:29:04.853 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-06 12:29:05.291 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-06 12:29:05.294 INFO Launching manager (service:false from-service:undefined)
+2018-08-06 13:52:49.563 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-06 13:52:50.050 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-06 13:52:50.051 INFO Launching manager (service:false from-service:undefined)
+2018-08-06 13:53:53.698 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-06 13:53:54.156 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-06 13:53:54.160 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 10:36:30.126 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 10:36:30.632 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 10:36:30.633 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 11:17:21.338 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 11:17:21.772 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 11:17:21.773 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 11:22:32.287 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 11:22:32.754 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 11:22:32.756 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 11:26:14.837 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 11:26:15.276 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 11:26:15.277 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 11:47:50.901 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 11:47:51.371 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 11:47:51.372 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 14:17:15.701 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 14:17:16.173 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 14:17:16.174 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 14:42:41.157 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 14:42:41.616 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 14:42:41.619 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 14:57:37.789 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 14:57:38.288 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 14:57:38.290 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 15:00:16.067 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 15:00:16.516 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 15:00:16.517 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 15:10:26.838 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 15:10:27.531 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 15:10:27.534 INFO Launching manager (service:false from-service:undefined)
+2018-08-07 16:43:09.500 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 16:43:09.933 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-07 16:43:09.935 INFO Launching manager (service:false from-service:undefined)
+2018-08-10 09:28:32.214 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-10 09:28:32.800 WARN query "ping" (options: {}) failed: Could not send request [because] connect ECONNREFUSED 127.0.0.1:5891
+2018-08-10 09:28:32.801 INFO Launching manager (service:false from-service:undefined)

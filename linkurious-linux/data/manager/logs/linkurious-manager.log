@@ -1,0 +1,169 @@
+2018-02-12 11:14:00.237 INFO starting...
+2018-02-12 11:14:00.244 INFO socket ready
+2018-02-12 11:14:00.251 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-02-12 11:20:59.656 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-02-12 11:20:59.707 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"4g","JAVA_HOME":"/usr/lib/jvm/java-8-openjdk-amd64"}}
+2018-02-12 11:20:59.709 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-02-12 11:20:59.711 INFO action: "stopServices" option:{}
+2018-02-12 11:20:59.834 INFO action: "stopServices" option:{}
+2018-02-12 11:20:59.836 INFO action: "kill" option:{}
+2018-02-12 11:20:59.836 INFO goodbye
+2018-02-12 11:38:20.431 INFO starting...
+2018-02-12 11:38:20.438 INFO socket ready
+2018-02-12 11:38:20.445 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-01 14:26:14.198 INFO starting...
+2018-08-01 14:26:14.205 INFO socket ready
+2018-08-01 14:26:14.212 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-01 14:26:45.177 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-01 14:26:45.248 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"4g","JAVA_HOME":"/usr/lib/jvm/java-8-openjdk-amd64"}}
+2018-08-01 14:26:45.251 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-01 14:26:45.397 INFO action: "getOptions" option:{}
+2018-08-01 14:26:45.398 INFO action: "getServicesState" option:{}
+2018-08-01 14:27:01.781 INFO action: "getOptions" option:{}
+2018-08-01 14:27:01.783 INFO action: "getServicesState" option:{}
+2018-08-01 14:27:10.490 INFO action: "getOptions" option:{}
+2018-08-01 14:27:10.493 INFO action: "getServicesState" option:{}
+2018-08-01 14:27:10.625 INFO action: "getOptions" option:{}
+2018-08-01 14:27:10.627 INFO action: "getServicesState" option:{}
+2018-08-01 14:27:25.883 INFO action: "getOptions" option:{}
+2018-08-01 14:27:25.886 INFO action: "getServicesState" option:{}
+2018-08-01 14:27:38.847 INFO action: "getOptions" option:{}
+2018-08-01 14:27:38.849 INFO action: "getServicesState" option:{}
+2018-08-01 14:28:13.139 INFO action: "getOptions" option:{}
+2018-08-01 14:28:13.142 INFO action: "getServicesState" option:{}
+2018-08-01 14:28:13.272 INFO action: "getOptions" option:{}
+2018-08-01 14:28:13.273 INFO action: "getServicesState" option:{}
+2018-08-01 14:29:33.766 INFO action: "getOptions" option:{}
+2018-08-01 14:29:33.768 INFO action: "getServicesState" option:{}
+2018-08-01 14:30:42.876 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-01 14:30:42.937 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"4g","JAVA_HOME":"/usr/lib/jvm/java-8-openjdk-amd64"}}
+2018-08-01 14:30:42.940 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-01 14:30:42.943 INFO action: "startServices" option:{}
+2018-08-01 14:30:49.945 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-01 14:30:50.008 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"4g","JAVA_HOME":"/usr/lib/jvm/java-8-openjdk-amd64"}}
+2018-08-01 14:30:50.010 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-01 14:30:50.012 INFO action: "stopServices" option:{}
+2018-08-01 14:30:50.246 INFO action: "stopServices" option:{}
+2018-08-01 14:30:50.250 INFO action: "kill" option:{}
+2018-08-01 14:30:50.251 INFO goodbye
+2018-08-01 14:31:29.649 INFO starting...
+2018-08-01 14:31:29.657 INFO socket ready
+2018-08-01 14:31:29.664 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome","processOwner":"xvt"}
+2018-08-06 10:56:52.430 INFO starting...
+2018-08-06 10:56:52.448 INFO socket ready
+2018-08-06 10:56:52.470 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-06 12:20:04.309 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-06 12:20:04.613 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-06 12:20:04.649 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-06 12:20:04.658 INFO action: "stopServices" option:{}
+2018-08-06 12:20:05.639 INFO action: "stopServices" option:{}
+2018-08-06 12:20:05.650 INFO action: "kill" option:{}
+2018-08-06 12:21:49.652 INFO starting...
+2018-08-06 12:21:49.670 INFO socket ready
+2018-08-06 12:21:49.684 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-06 12:27:14.583 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-06 12:27:14.695 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-06 12:27:14.700 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-06 12:27:14.704 INFO action: "stopServices" option:{}
+2018-08-06 12:27:14.945 INFO action: "stopServices" option:{}
+2018-08-06 12:27:14.950 INFO action: "kill" option:{}
+2018-08-06 12:29:05.869 INFO starting...
+2018-08-06 12:29:05.887 INFO socket ready
+2018-08-06 12:29:05.903 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-06 12:32:16.715 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-06 12:32:16.828 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-06 12:32:16.835 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-06 12:32:16.838 INFO action: "stopServices" option:{}
+2018-08-06 12:32:17.081 INFO action: "stopServices" option:{}
+2018-08-06 12:32:17.084 INFO action: "kill" option:{}
+2018-08-06 12:32:17.085 INFO goodbye
+2018-08-06 13:52:50.673 INFO starting...
+2018-08-06 13:52:50.692 INFO socket ready
+2018-08-06 13:52:50.709 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-06 13:53:15.695 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-06 13:53:15.837 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-06 13:53:15.842 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-06 13:53:15.845 INFO action: "stopServices" option:{}
+2018-08-06 13:53:16.328 INFO action: "stopServices" option:{}
+2018-08-06 13:53:16.335 INFO action: "kill" option:{}
+2018-08-06 13:53:54.699 INFO starting...
+2018-08-06 13:53:54.715 INFO socket ready
+2018-08-06 13:53:54.731 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-07 10:14:39.178 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-07 10:14:39.440 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-07 10:14:39.505 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-07 10:14:39.510 INFO action: "stopServices" option:{}
+2018-08-07 10:14:40.239 INFO action: "stopServices" option:{}
+2018-08-07 10:14:40.249 INFO action: "kill" option:{}
+2018-08-07 10:36:31.216 INFO starting...
+2018-08-07 10:36:31.235 INFO socket ready
+2018-08-07 10:36:31.253 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-07 10:41:54.626 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-07 10:41:54.740 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-07 10:41:54.744 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-07 10:41:54.748 INFO action: "stopServices" option:{}
+2018-08-07 10:41:54.990 INFO action: "stopServices" option:{}
+2018-08-07 10:41:54.993 INFO action: "kill" option:{}
+2018-08-07 10:41:54.995 INFO goodbye
+2018-08-07 11:17:22.296 INFO starting...
+2018-08-07 11:17:22.313 INFO socket ready
+2018-08-07 11:17:22.328 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             2018-08-07 11:22:33.459 INFO starting...
+2018-08-07 11:22:33.478 INFO socket ready
+2018-08-07 11:22:33.502 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-07 11:22:51.954 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-07 11:22:52.103 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-07 11:22:52.108 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-07 11:22:52.115 INFO action: "startServices" option:{}
+2018-08-07 11:26:15.858 INFO starting...
+2018-08-07 11:26:15.876 INFO socket ready
+2018-08-07 11:26:15.893 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-07 11:47:51.962 INFO starting...
+2018-08-07 11:47:51.983 INFO socket ready
+2018-08-07 11:47:52.026 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-07 12:32:48.465 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-07 12:32:48.753 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-07 12:32:48.759 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-07 12:32:48.766 INFO action: "startServices" option:{}
+2018-08-07 14:00:40.238 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-07 14:00:40.357 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-07 14:00:40.366 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-07 14:00:40.389 INFO action: "startServices" option:{}
+2018-08-07 14:17:16.726 INFO starting...
+2018-08-07 14:17:16.744 INFO socket ready
+2018-08-07 14:17:16.762 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-07 14:39:39.426 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-07 14:39:39.561 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-07 14:39:39.568 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-07 14:39:39.574 INFO action: "startServices" option:{}
+2018-08-07 14:40:50.408 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-07 14:40:50.639 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-07 14:40:50.645 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-07 14:40:50.649 INFO action: "stopServices" option:{}
+2018-08-07 14:40:51.405 INFO action: "stopServices" option:{}
+2018-08-07 14:40:51.420 INFO action: "kill" option:{}
+2018-08-07 14:40:51.421 INFO goodbye
+2018-08-07 14:42:42.290 INFO starting...
+2018-08-07 14:42:42.309 INFO socket ready
+2018-08-07 14:42:42.326 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-07 14:57:39.068 INFO starting...
+2018-08-07 14:57:39.091 INFO socket ready
+2018-08-07 14:57:39.110 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-07 15:00:17.087 INFO starting...
+2018-08-07 15:00:17.137 INFO socket ready
+2018-08-07 15:00:17.160 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-07 15:10:28.155 INFO starting...
+2018-08-07 15:10:28.172 INFO socket ready
+2018-08-07 15:10:28.186 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-07 16:43:10.494 INFO starting...
+2018-08-07 16:43:10.510 INFO socket ready
+2018-08-07 16:43:10.536 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-10 09:28:33.323 INFO starting...
+2018-08-10 09:28:33.339 INFO socket ready
+2018-08-10 09:28:33.355 INFO started {"name":"Linkurious","description":"http://linkurio.us","autoStartServices":true,"port":5891,"secret":"graphs-are-awesome"}
+2018-08-10 09:29:10.168 INFO action: "getService" option:{"name":"Embedded ElasticSearch"}
+2018-08-10 09:29:10.281 INFO action: "updateService" option:{"name":"Embedded ElasticSearch","disabled":false,"maxRestarts":100,"restartDelay":5000,"home":"../../system","binPath":"/bin/sh","arguments":["elasticsearch/bin/elasticsearch"],"env":{"ES_HEAP_SIZE":"2g","JAVA_HOME":"/usr"}}
+2018-08-10 09:29:10.286 INFO action: "getService" option:{"name":"Linkurious Server"}
+2018-08-10 09:29:10.290 INFO action: "stopServices" option:{}
+2018-08-10 09:29:10.473 INFO action: "stopServices" option:{}
+2018-08-10 09:29:10.477 INFO action: "kill" option:{}

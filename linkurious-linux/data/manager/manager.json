@@ -1,0 +1,40 @@
+{
+  "name": "Linkurious",
+  "description": "http://linkurio.us",
+  "autoStartServices": true,
+  "port": 5891,
+  "secret": "graphs-are-awesome",
+  "services": [
+    {
+      "name": "Linkurious Server",
+      "home": "../../system",
+      "maxRestarts": 0,
+      "noRestartExitCodes": [
+        2,
+        3
+      ],
+      "restartDelay": 2000,
+      "binPath": "node",
+      "arguments": [
+        "server/app.js",
+        "-p"
+      ],
+      "env": {}
+    },
+    {
+      "name": "Embedded ElasticSearch",
+      "disabled": false,
+      "maxRestarts": 100,
+      "restartDelay": 5000,
+      "home": "../../system",
+      "binPath": "/bin/sh",
+      "arguments": [
+        "elasticsearch/bin/elasticsearch"
+      ],
+      "env": {
+        "ES_HEAP_SIZE": "2g",
+        "JAVA_HOME": "/usr"
+      }
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "logLevel": "debug",
+  "addPrefix": true,
+  "customLevels": {
+    "//server.services.sqlDb": "set to 'debug' to see all raw SQL calls",
+    "server.services.sqlDb": "info",
+
+    "//server.services.webServer": "set to 'debug' to log all API HTTP requests",
+    "server.services.webServer": "info",
+
+    "//server.services.access": "set to 'info' to hide all login attempts",
+    "server.services.access": "debug",
+
+    "server.services.access.provider": "info",
+
+    "server.services.index": "info",
+
+    "server.services.data.dataSource": "info",
+
+    "server.services.scheduler": "info"
+  }
+}

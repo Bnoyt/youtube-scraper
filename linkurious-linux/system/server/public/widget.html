@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Linkurious Widget</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="assets/images/favicon.ico">
+  <link rel="stylesheet" type="text/css" href="./../assets/widget/widget.css?1484150988654">
+  <link rel="stylesheet" type="text/css" href="./../assets/css/override.css">
+
+</head>
+<body id="lke_widget">
+<script id="tooltip-node" type="x-tmpl-mustache">
+  <div class="sigma-tooltip-node">
+    <div class="arrow"></div>
+    <div class="sigma-tooltip-header">
+      {{label}}
+      <button type="button" class="close" onclick="LK.closeTooltip();">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+    </div>
+    <div class="sigma-tooltip-body">
+      <p>
+      {{#mustacheCategories}}
+        <span class="label static">
+          {{.}}
+        </span>
+      {{/mustacheCategories}}
+      </p>
+      <ul>
+      {{#mustacheProperties}}
+        <li>
+          <span style="text-transform:capitalize;font-weight:bold;color: #999999;">
+            {{key}}
+          </span>
+          <br />
+          <span>
+            {{#text}}{{value}}{{/text}}
+            {{#url}}<a href="{{value}}" target="_blank">{{value}}</a>{{/url}}
+            {{#image}}<img src="{{value}}" />{{/image}}
+          </span>
+        </li>
+      {{/mustacheProperties}}
+      </ul>
+    </div>
+    <div class="sigma-tooltip-footer"></div>
+  </div>
+  </script>
+
+<script id="tooltip-edge" type="x-tmpl-mustache">
+  <div class="sigma-tooltip-edge">
+    <div class="arrow"></div>
+    <div class="sigma-tooltip-header">
+      {{label}}
+      <button type="button" class="close" onclick="LK.closeTooltip();">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+    </div>
+    <div class="sigma-tooltip-body">
+      <p>
+        {{#mustacheCategories}}
+        <span class="label static">
+          {{.}}
+        </span>
+      {{/mustacheCategories}}
+      </p>
+      <ul>
+      {{#mustacheProperties}}
+        <li>
+          <span style="text-transform:capitalize;font-weight:bold;color: #999999;">
+            {{key}}
+          </span>
+          <br />
+          <span>
+            {{#text}}{{value}}{{/text}}
+            {{#url}}<a href="{{value}}" target="_blank">{{value}}</a>{{/url}}
+            {{#image}}<img src="{{value}}" />{{/image}}
+          </span>
+        </li>
+      {{/mustacheProperties}}
+      </ul>
+    </div>
+    <div class="sigma-tooltip-footer"></div>
+  </div>
+  </script>
+
+
+<div id="default-background"></div>
+<div id="leaflet-container"></div>
+<div id="graph-canvas"></div>
+
+<div id="share-overlay" class="hidden">
+  <div>
+    <div class="header">
+      <img src="/assets/img/favicon-dark-24x24.png" width="24" height="24">
+      Share this visualization
+      <button type="button" class="close" style="opacity:1" onclick="LK.closeShareOverlay();" title="Close">
+        <span aria-hidden="true">&times;</span>
+        <span class="sr-only">Close</span>
+      </button>
+    </div>
+    <div class="body">
+      <h4>Link</h4>
+      <p>Share the link below to provide direct access to the visualization.</p>
+      <div>
+        <input id="url" type="text" class="form-control" readonly="readonly" onclick="this.select();">
+      </div>
+      <h4>Integration</h4>
+      <p>Integrate the code below into your website to embed the visualization.</p>
+      <div>
+        <textarea id="code" class="form-control" rows="2" onclick="this.select();" style="font-size:12px;"></textarea>
+      </div>
+    </div>
+    <div class="footer"></div>
+  </div>
+</div>
+
+<div id="drag-overlay" class="hidden">
+  <div>
+    <span style="position:absolute; right:-25px; top:-35px;">
+      <button type="button" class="close" style="font-size:40px; opacity:0.5;" onclick="LK.closeDragOverlay();" title="Close">
+      <span aria-hidden="true">&times;</span>
+      <span class="sr-only">Close</span>
+    </button>
+    </span>
+    <div id="drop-zone-graph" class="drop-zone">
+      <div>
+        <i class="fa fa-upload fa-3x"></i><br>
+        Drop graph file here (JSON or GEXF)
+      </div>
+    </div>
+    <div id="drop-zone-design" class="drop-zone">
+      <div>
+        <i class="fa fa-upload fa-3x"></i><br>
+        Drop design file here<br>&nbsp;
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="viewController" class="btn-group-vertical" role="group" aria-label="zoomController">
+  <button id="viewController-geo" type="button" class="btn btn-default hidden" onclick="LK.toggleGeoMode();" title="Toggle Geo map">
+    <i class="fa fa-globe"></i>
+  </button>
+  <button id="viewController-legend" type="button" class="btn btn-default hidden" onclick="LK.toggleLegend();" title="Toggle Legend">
+    <i class="fa fa-tasks"></i>
+  </button>
+  <button id="viewController-share" type="button" class="btn btn-default hidden" onclick="LK.share();" title="Share">
+    <i class="fa fa-share-alt"></i>
+  </button>
+  <button id="viewController-layout" type="button" class="btn btn-default hidden" onclick="LK.toggleLayout();" title="Layout">
+    <i class="fa fa-play"></i>
+  </button>
+  <button id="viewController-fullscreen" type="button" class="btn btn-default hidden" onclick="LK.fullscreen();" title="Full screen">
+    <i class="fa fa-expand"></i>
+  </button>
+  <button id="viewController-zoomout" type="button" class="btn btn-default hidden" onclick="LK.zoomIn();" title="Zoom In">
+    <i class="fa fa-plus"></i>
+  </button>
+  <button id="viewController-zoomin" type="button" class="btn btn-default hidden" onclick="LK.zoomOut();" title="Zoom Out">
+    <i class="fa fa-minus"></i>
+  </button>
+</div>
+
+<div id="searchbar" class="search-wrapper hidden">
+  <form id="result-list__search" class="result-list__search search-form">
+    <button type="button" title="Search" class="autocomplete__submit" onclick="">
+      <i class="fa fa-search"></i>
+    </button>
+
+    <button type="button"
+            class="autocomplete__reset hidden"
+            id="autocomplete__reset"
+            title="Clear search"
+            onclick="LK.clearSearch();">
+      <span aria-hidden="true">&times;</span>
+      <span class="sr-only">Close</span>
+    </button>
+
+    <div class="autocomplete">
+      <input autocomplete="off"
+             type="search"
+             name="q"
+             id="result-list__input"
+             value=""
+             oninput="LK.search();"
+             class="autocomplete__input"
+             spellcheck="false">
+
+      <div id="result-list__dropdown" class="autocomplete__dropdown hidden"></div>
+    </div>
+  </form>
+</div>
+
+<!-- we force the loading of FontAwesome -->
+<i class="fa fa-camera-retro fa-1x" style="color:rgba(0,0,0,0);height:0;width:0"></i>
+
+<script>
+  var widgetData = 'WIDGET_DATA';
+</script>
+
+<script src="./../assets/widget/vendorsWidget.min.js"></script>
+
+<script src="./../assets/widget/widget.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+{
+  "groups": [
+    "Linkurious",
+    "Auth",
+    "Applications",
+    "Graph",
+    "Nodes",
+    "Edges",
+    "Schema",
+    "Visualizations",
+    "Search",
+    "Alerts",
+    "DataSources",
+    "Users"
+  ],
+  "apis": {
+    "Linkurious": [
+      "Status",
+      "Version",
+      "DataSourcesStatus",
+      "GetConfiguration",
+      "UpdateConfiguration",
+      "SaveEvent",
+      "CreateReport",
+      "RestartLinkurious"
+    ],
+    "Auth": [
+      "Login",
+      "LoginRedirect",
+      "Logout",
+      "IsAuthenticated",
+      "GetCurrentUser",
+      "UpdateCurrentUser",
+      "LoginSSO"
+    ],
+    "Applications": [
+      "GetApplications",
+      "CreateApplication",
+      "UpdateApplication"
+    ],
+    "Graph": [
+      "GetRawGraphQuery",
+      "ListRawGraphQuery",
+      "SaveRawGraphQuery",
+      "UpdateRawGraphQuery",
+      "DeleteRawGraphQuery",
+      "RunRawGraphQuery",
+      "GetAllShortestPaths"
+    ],
+    "Nodes": [
+      "GetNode",
+      "PostNode",
+      "PatchNode",
+      "DeleteNode",
+      "GetNodesCount",
+      "GetNeighborsStatistics",
+      "GetAdjacentGraph"
+    ],
+    "Edges": [
+      "GetEdge",
+      "PostEdge",
+      "PatchEdge",
+      "DeleteEdge",
+      "GetEdgesCount",
+      "GetAdjacentEdged"
+    ],
+    "Schema": [
+      "GetSchemaNodeTypes",
+      "GetSchemaNodeProperties",
+      "GetSchemaEdgeTypes",
+      "GetSchemaEdgeProperties",
+      "GetSimpleSchema"
+    ],
+    "Visualizations": [
+      "GetVisualization",
+      "CreateVisualization",
+      "UpdateVisualization",
+      "DeleteVisualization",
+      "GetVisualizationCount",
+      "DuplicateVisualization",
+      "getVisualizationTree",
+      "createVisualizationFolder",
+      "updateVisualizationFolder",
+      "deleteVisualizationFolder",
+      "visualizationShares",
+      "setVisualizationShare",
+      "deleteVisualizationShare",
+      "sharedVisualizations",
+      "getSandbox",
+      "updateSandbox",
+      "getWidgetByKey",
+      "createVisualizationWidget",
+      "updateVisualizationWidget",
+      "deleteVisualizationWidget"
+    ],
+    "Search": [
+      "SearchReIndex",
+      "SearchStatus",
+      "SearchFull",
+      "SearchNodesOrEdges"
+    ],
+    "Alerts": [
+      "GetAlert",
+      "GetAlerts",
+      "CreateAlert",
+      "UpdateAlert",
+      "DeleteAlert",
+      "GetAlertForUsers",
+      "GetAlertsForUsers",
+      "GetMatch",
+      "GetMatches",
+      "GetMatchActions",
+      "DoMatchAction"
+    ],
+    "DataSources": [
+      "ReconnectSource",
+      "ResetSourceStyles",
+      "getHiddenNodeProperties",
+      "getHiddenEdgeProperties",
+      "getNoIndexNodeProperties",
+      "getNoIndexEdgeProperties",
+      "setHiddenNodeProperties",
+      "setHiddenEdgeProperties",
+      "setNoIndexNodeProperties",
+      "setNoIndexEdgeProperties",
+      "getAllSourceInfo",
+      "createSourceConfig",
+      "deleteSourceConfig",
+      "deleteSourceData"
+    ],
+    "Users": [
+      "GetUser",
+      "GetUsers",
+      "CreateUser",
+      "UpdateUser",
+      "DeleteUser",
+      "GetGroup",
+      "GetGroups",
+      "CreateGroup",
+      "RenameGroup",
+      "DeleteGroup",
+      "GetAccessRightsInfo",
+      "PutAccessRights",
+      "DeleteAccessRight"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name" : "log4js",
+  "main" : "./RootLogger.js",
+  "version": "1.0",
+  "private": false,
+  "engines": {
+    "node": "v4.2.4"
+  },
+  "dependencies": {
+    "bluebird": "3.4.6",
+    "winston": "~0.8.x",
+    "fs-extra": "^0.30.0"
+  }
+}

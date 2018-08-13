@@ -1,0 +1,16 @@
+[2018-08-10 09:28:36,994][INFO ][node                     ] [Linkurious Index] version[1.4.5], pid[4778], build[2aaf797/2015-04-27T08:06:06Z]
+[2018-08-10 09:28:36,999][INFO ][node                     ] [Linkurious Index] initializing ...
+[2018-08-10 09:28:37,018][INFO ][plugins                  ] [Linkurious Index] loaded [], sites []
+[2018-08-10 09:28:44,497][INFO ][node                     ] [Linkurious Index] initialized
+[2018-08-10 09:28:44,497][INFO ][node                     ] [Linkurious Index] starting ...
+[2018-08-10 09:28:45,229][INFO ][transport                ] [Linkurious Index] bound_address {inet[/127.0.0.1:9301]}, publish_address {inet[/127.0.0.1:9301]}
+[2018-08-10 09:28:45,278][INFO ][discovery                ] [Linkurious Index] elasticsearch/-DmO2UG8Sc2q3HSc-fK8QA
+[2018-08-10 09:28:46,868][INFO ][monitor.jvm              ] [Linkurious Index] [gc][young][1][1] duration [752ms], collections [1]/[1.6s], total [752ms]/[752ms], memory [266.2mb]->[34.9mb]/[1.9gb], all_pools {[young] [266.2mb]->[7.9mb]/[266.2mb]}{[survivor] [0b]->[26.9mb]/[33.2mb]}{[old] [0b]->[0b]/[1.6gb]}
+[2018-08-10 09:28:50,206][INFO ][cluster.service          ] [Linkurious Index] new_master [Linkurious Index][-DmO2UG8Sc2q3HSc-fK8QA][vagrant][inet[/127.0.0.1:9301]]{max_local_storage_nodes=1, master=true}, reason: zen-disco-join (elected_as_master)
+[2018-08-10 09:28:50,272][INFO ][http                     ] [Linkurious Index] bound_address {inet[/127.0.0.1:9201]}, publish_address {inet[/127.0.0.1:9201]}
+[2018-08-10 09:28:50,273][INFO ][node                     ] [Linkurious Index] started
+[2018-08-10 09:28:50,286][INFO ][gateway                  ] [Linkurious Index] recovered [0] indices into cluster_state
+[2018-08-10 09:29:10,333][INFO ][node                     ] [Linkurious Index] stopping ...
+[2018-08-10 09:29:10,377][INFO ][node                     ] [Linkurious Index] stopped
+[2018-08-10 09:29:10,378][INFO ][node                     ] [Linkurious Index] closing ...
+[2018-08-10 09:29:10,393][INFO ][node                     ] [Linkurious Index] closed

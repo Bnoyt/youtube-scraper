@@ -1,0 +1,1 @@
+[2018-04-10 14:09:24,697][WARN ][monitor.jvm              ] [Linkurious Index] [gc][young][4928904][275] duration [3.9s], collections [1]/[5s], total [3.9s]/[10.9s], memory [1.1gb]->[82.1mb]/[3.8gb], all_pools {[young] [1gb]->[8.3mb]/[1gb]}{[survivor] [22.1kb]->[274kb]/[136.5mb]}{[old] [73.5mb]->[73.5mb]/[2.6gb]}

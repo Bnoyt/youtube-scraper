@@ -1,0 +1,29 @@
+[2018-02-12 11:14:02,108][INFO ][node                     ] [Linkurious Index] version[1.4.5], pid[26782], build[2aaf797/2015-04-27T08:06:06Z]
+[2018-02-12 11:14:02,108][INFO ][node                     ] [Linkurious Index] initializing ...
+[2018-02-12 11:14:02,111][INFO ][plugins                  ] [Linkurious Index] loaded [], sites []
+[2018-02-12 11:14:04,037][INFO ][node                     ] [Linkurious Index] initialized
+[2018-02-12 11:14:04,037][INFO ][node                     ] [Linkurious Index] starting ...
+[2018-02-12 11:14:04,127][INFO ][transport                ] [Linkurious Index] bound_address {inet[/127.0.0.1:9301]}, publish_address {inet[/127.0.0.1:9301]}
+[2018-02-12 11:14:04,133][INFO ][discovery                ] [Linkurious Index] elasticsearch/1mWHkubHSFOMrA-rv6WZ1g
+[2018-02-12 11:14:07,147][INFO ][cluster.service          ] [Linkurious Index] new_master [Linkurious Index][1mWHkubHSFOMrA-rv6WZ1g][def-vlz-hdp-edgenode01][inet[/127.0.0.1:9301]]{max_local_storage_nodes=1, master=true}, reason: zen-disco-join (elected_as_master)
+[2018-02-12 11:14:07,185][INFO ][gateway                  ] [Linkurious Index] recovered [0] indices into cluster_state
+[2018-02-12 11:14:07,209][INFO ][http                     ] [Linkurious Index] bound_address {inet[/127.0.0.1:9201]}, publish_address {inet[/127.0.0.1:9201]}
+[2018-02-12 11:14:07,209][INFO ][node                     ] [Linkurious Index] started
+[2018-02-12 11:20:59,740][INFO ][node                     ] [Linkurious Index] stopping ...
+[2018-02-12 11:20:59,775][INFO ][node                     ] [Linkurious Index] stopped
+[2018-02-12 11:20:59,775][INFO ][node                     ] [Linkurious Index] closing ...
+[2018-02-12 11:20:59,779][INFO ][node                     ] [Linkurious Index] closed
+[2018-02-12 11:38:22,293][INFO ][node                     ] [Linkurious Index] version[1.4.5], pid[6415], build[2aaf797/2015-04-27T08:06:06Z]
+[2018-02-12 11:38:22,293][INFO ][node                     ] [Linkurious Index] initializing ...
+[2018-02-12 11:38:22,296][INFO ][plugins                  ] [Linkurious Index] loaded [], sites []
+[2018-02-12 11:38:23,855][INFO ][node                     ] [Linkurious Index] initialized
+[2018-02-12 11:38:23,855][INFO ][node                     ] [Linkurious Index] starting ...
+[2018-02-12 11:38:23,984][INFO ][transport                ] [Linkurious Index] bound_address {inet[/127.0.0.1:9301]}, publish_address {inet[/127.0.0.1:9301]}
+[2018-02-12 11:38:23,991][INFO ][discovery                ] [Linkurious Index] elasticsearch/hHEO-FilSu2b1DqRTxIFYQ
+[2018-02-12 11:38:27,003][INFO ][cluster.service          ] [Linkurious Index] new_master [Linkurious Index][hHEO-FilSu2b1DqRTxIFYQ][def-vlz-hdp-edgenode01][inet[/127.0.0.1:9301]]{max_local_storage_nodes=1, master=true}, reason: zen-disco-join (elected_as_master)
+[2018-02-12 11:38:27,032][INFO ][gateway                  ] [Linkurious Index] recovered [0] indices into cluster_state
+[2018-02-12 11:38:27,062][INFO ][http                     ] [Linkurious Index] bound_address {inet[/127.0.0.1:9201]}, publish_address {inet[/127.0.0.1:9201]}
+[2018-02-12 11:38:27,062][INFO ][node                     ] [Linkurious Index] started
+[2018-02-12 18:31:42,163][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_266322b8] creating index, cause [api], shards [1]/[0], mappings [_default_, node, edge]
+[2018-02-12 18:31:43,502][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_266322b8] update_mapping [node] (dynamic)
+[2018-02-12 18:35:10,511][INFO ][cluster.metadata         ] [Linkurious Index] [linkurious_266322b8] update_mapping [node] (dynamic)

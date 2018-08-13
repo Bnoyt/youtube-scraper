@@ -1,0 +1,242 @@
+/**
+ * Example of UI colors override.
+ */
+
+
+/**
+ * LINK
+ */
+
+
+a {
+  color: #3498db;
+}
+
+a:hover, a:focus {
+  color: #2980b9;
+}
+
+
+
+/**
+ * BUTTON
+ */
+
+
+.btn.btn-lk-inverse {
+  background-color: #3498db;
+  border: 1px solid #2980b9;
+}
+
+.btn.btn-lk-inverse:hover,
+.btn.btn-lk-inverse:active,
+.btn.btn-lk-inverse.active {
+  background-color: #2980b9;
+  border: 1px solid #7f8c8d;
+}
+
+.btn.btn-lk:hover,
+.btn.btn-lk:active,
+.btn.btn-lk.active {
+  background-color: #3498db;
+}
+
+.btn.btn-lk:hover>i,
+.btn.btn-lk:active>i,
+.btn.btn-lk.active>i {
+  background-color: #3498db;
+}
+
+
+
+/**
+ * DROPDOWN
+ */
+
+
+.dropdown-menu>li>a:focus,
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:active {
+  background-color: #3498db;
+}
+
+
+
+/**
+ * LIST-GROUP
+ */
+
+
+.list-group-item:focus>a,
+.list-group-item:hover>a,
+.list-group-item:active>a,
+.list-group-item.active>a,
+.list-group-item.active:hover>a,
+.list-group-item.active:focus>a,
+.list-group-item:focus>span,
+.list-group-item:hover>span,
+.list-group-item:active>span,
+.list-group-item.active>span,
+.list-group-item.active:hover>span,
+.list-group-item.active:focus>span {
+  color: #222;
+  background-color: #efece5;
+  box-shadow: inset 2px 0 0 #3498db;
+}
+
+.list-group-item:focus,
+.list-group-item:hover,
+.list-group-item:active,
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  box-shadow: inset 2px 0 0 #3498db;
+  background-color: #efece5;
+}
+
+
+
+/**
+ * MODAL
+ */
+
+
+.modal-header {
+  background: #2c3e50;
+}
+
+
+
+/**
+ * TAB
+ */
+
+
+.nav-tabs>li.active>a,
+.nav-tabs.nav-justified>li.active>a {
+  border-bottom-color: #3498db;
+}
+
+.nav-tabs>li>a:not(.lk-close):hover,
+.nav-tabs.nav-justified>li>a:not(.lk-close):hover,
+.nav-tabs>li>a:not(.lk-close):focus,
+.nav-tabs.nav-justified>li>a:not(.lk-close):focus,
+.nav-tabs>li>a:not(.lk-close):active,
+.nav-tabs.nav-justified>li>a:not(.lk-close):active {
+  color: #222;
+  border-bottom-color: #3498db;
+}
+
+
+
+/**
+ * NAV-STACKED
+ */
+
+
+.nav-stacked>li>a:focus,
+.nav-stacked>li>a:hover,
+.nav-stacked>li>a:active {
+  background-color: #3498db;
+}
+
+
+
+/**
+ * NAVBAR
+ */
+
+
+.navbar-default {
+  background-color: #2c3e50;
+  border-color: #2c3e50;
+}
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #2c3e50;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus {
+  color: #3498db;
+}
+
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+  background-color: #2c3e50;
+  color: #3498db;
+}
+
+
+
+/**
+ * DASHBOARD TILE
+ */
+
+
+.folder-item:hover h4,
+.folder-item:focus h4,
+.folder-item:active h4,
+.folder-item.active h4 {
+  background-color: #3498db;
+}
+
+
+
+/**
+ * VIZ TOOLBAR
+ */
+
+
+lk-toolbar .nav-pills>li>a.btn:focus,
+lk-toolbar .nav-pills>li>a.btn:hover,
+lk-toolbar .nav-pills>li>a.btn:active,
+lk-toolbar .nav-pills>li>a.btn.active {
+  border-bottom-color: #3498db;
+}
+
+
+
+/**
+ * VIZ ACTIONS BAR
+ */
+
+
+#lk-actions .btn.btn-lk:hover,
+#lk-actions .btn.btn-lk:active,
+#lk-actions .btn.btn-lk.active {
+  background-color: #3498db;
+}
+
+#lk-actions .btn-group.open > button[dropdown-toggle].btn-lk {
+  background-color: #3498db;
+}
+
+
+
+/**
+ * VIZ SEARCH
+ */
+
+
+.lk-search-wrapper>input:hover,
+.lk-search-wrapper>input:focus,
+.lk-search-wrapper>input:active,
+.lk-search-wrapper>input.active {
+  border-bottom-color: #3498db;
+}
+
+ul.select2-result-sub>li:hover {
+  border-left-color: #3498db;
+}
+
+
+/**
+ * HIDE "Edit data" BUTTON
+ */
+/*
+li.data-edit-button { display: none; }
+*/
+

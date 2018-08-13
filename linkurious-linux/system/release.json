@@ -1,0 +1,7 @@
+{
+  "tag_name": "v2.2.4",
+  "name": "Crispy Croissant",
+  "bodyFile": "RELEASE.md",
+  "prerelease": false,
+  "enterprise": true
+}

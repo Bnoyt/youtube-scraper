@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE translationbundle [
+<!ELEMENT translationbundle (translation)*>
+<!ATTLIST translationbundle class CDATA #IMPLIED>
+
+<!ELEMENT translation (#PCDATA|ph|source)*>
+<!ATTLIST translation id CDATA #REQUIRED>
+<!ATTLIST translation seq CDATA #IMPLIED>
+<!ATTLIST translation name CDATA #IMPLIED>
+<!ATTLIST translation desc CDATA #IMPLIED>
+<!ATTLIST translation meaning CDATA #IMPLIED>
+<!ATTLIST translation obsolete (obsolete) #IMPLIED>
+<!ATTLIST translation xml:space (default|preserve) "default">
+<!ATTLIST translation is_hidden CDATA #IMPLIED>
+
+<!ELEMENT source (#PCDATA)>
+
+<!ELEMENT ph (#PCDATA|ex)*>
+<!ATTLIST ph name CDATA #REQUIRED>
+
+<!ELEMENT ex (#PCDATA)>
+]>
+<translationbundle>
+  <translation id="oauth.signin.button">
+            Sign in with <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+          </translation>
+  <translation id="signin.form.user.label">
+              Username or e-mail address
+            </translation>
+  <translation id="signin.form.password.label">Password</translation>
+  <translation id="signin.form.submit">
+              Sign in
+            </translation>
+  <translation id="form.error.required">
+    <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> is required
+  </translation>
+  <translation id="confirmation">
+      Confirm
+    </translation>
+  <translation id="cancel">
+      Cancel
+    </translation>
+  <translation id="modal.createFolder.folderName">Folder
+        name</translation>
+  <translation id="modal.renameFolder.form.folderName">Folder
+        name</translation>
+  <translation id="modal.duplicateVisualization.form.title">Title</translation>
+  <translation id="modal.renameVisualization.form.title">Title</translation>
+  <translation id="expandModal.warning">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+    Wow ! Loading <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> neighbors at once is a lot! How about refining the results?
+  </translation>
+  <translation id="expandModal.field.get">Get</translation>
+  <translation id="expandModal.field.limit">Limit to</translation>
+  <translation id="modal.share.sharesList.intro">
+      Already shared with :
+    </translation>
+  <translation id="modal.share.visualizationOwner">
+          Original owner
+        </translation>
+  <translation id="modal.share.readonly.right">
+              Can read only
+            </translation>
+  <translation id="modal.share.write.right">
+              Can modify
+            </translation>
+  <translation id="modal.share.owner.right">
+              Can modify and share
+            </translation>
+  <translation id="modal.share.button.drop">Drop</translation>
+  <translation id="modal.share.button.add">Add</translation>
+  <translation id="modal.share.button.done">
+    Done
+  </translation>
+  <translation id="graph.node">node</translation>
+  <translation id="graph.edge">edge</translation>
+  <translation id="dashboard.search.openSyntaxDocumentation|">View advanced search syntax</translation>
+  <translation id="dashboard.search.placeholder">Type to search nodes in the database...</translation>
+  <translation id="dashboard.action.item.move">
+                  Move to...
+                </translation>
+  <translation id="dashboard.action.item.rename">
+                Rename
+              </translation>
+  <translation id="dashboard.action.item.duplicate">Duplicate...</translation>
+  <translation id="dashboard.create.visualization">
+              New visualization
+            </translation>
+  <translation id="dashboard.card.folder.subFolders">
+                  <ph name="ICU"><ex>ICU</ex></ph>
+                </translation>
+  <translation id="9116111962184110573">{VAR_PLURAL, plural, =1 {1 folder} other {<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> folders} }</translation>
+  <translation id="dashboard.card.folder.visualizations">
+                  <ph name="ICU"><ex>ICU</ex></ph>
+                </translation>
+  <translation id="8524360282472582126">{VAR_PLURAL, plural, =1 {1 visualization} other {<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> visualizations} }</translation>
+  <translation id="dashboard.card.folder.empty">
+                  No content
+                </translation>
+  <translation id="dashboard.card.visualization.shares">
+                  <ph name="ICU"><ex>ICU</ex></ph>
+                </translation>
+  <translation id="6311654566693794882">{VAR_PLURAL, plural, =0 {Private visualization} =1 {Shared with 1 user} other {Shared with <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> users} }</translation>
+  <translation id="dashboard.card.visualization.update">
+                  Edited on <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+                </translation>
+  <translation id="dashboard.card.visualization.sharedInfos">
+                  Shared by <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+                </translation>
+  <translation id="dashboard.action.item.open">
+        Open
+      </translation>
+  <translation id="dashboard.action.item.delete">
+        Delete
+      </translation>
+  <translation id="dashboard.action.item.share">
+        Share...
+      </translation>
+  <translation id="dashboard.action.visualization.create">
+        Create visualization...
+      </translation>
+  <translation id="dashboard.action.folder.create">
+        Create folder...
+      </translation>
+  <translation id="modal.queryResults.tabs.nodes">
+      <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> Nodes
+    </translation>
+  <translation id="modal.queryResults.tabs.edges">
+      <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> Edges
+    </translation>
+  <translation id="modal.queryResults.nodes.threshold">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> A limit of <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> results has been automatically applied.
+    </translation>
+  <translation id="modal.queryResults.nodes.noResults">
+        No nodes returned.
+      </translation>
+  <translation id="modal.queryResults.categories.label">Categories</translation>
+  <translation id="modal.queryResults.properties.label">Properties</translation>
+  <translation id="modal.queryResults.edges.threshold">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> A limit of <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> results has been automatically applied.
+    </translation>
+  <translation id="modal.queryResults.edges.noResults">
+        No edges returned.
+      </translation>
+  <translation id="modal.queryResults.type.label">Type</translation>
+  <translation id="modal.saveQuery.title">
+        Name (optional)</translation>
+  <translation id="modal.queryDocumentation.cypher.1">
+      Pattern matching is performed using a graph query language.
+      Linkurious supports <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph>Cypher<ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph> to query Neo4j databases.
+    </translation>
+  <translation id="modal.queryDocumentation.cypher.2">
+      Read the Cypher <ph name="START_LINK"><ex>&lt;a&gt;</ex></ph>Refcard<ph name="CLOSE_LINK"><ex>&lt;/a&gt;</ex></ph>
+      or read the full Cypher documentation in the
+      <ph name="START_LINK_1"><ex>&lt;a&gt;</ex></ph>Neo4j Manual<ph name="CLOSE_LINK"><ex>&lt;/a&gt;</ex></ph> to learn more.
+    </translation>
+  <translation id="modal.queryDocumentation.cypher.readOnly.title">Read-only operations</translation>
+  <translation id="modal.queryDocumentation.cypher.readOnly.1">
+      The operations are restricted to read-only queries to avoid accidental data corruption and crash of the
+      database server. Cypher queries must therefore start with the <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph>MATCH<ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph> or <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph>START<ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph>
+      operator. Cypher queries must end with the <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph>RETURN<ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph> operator to explicitely return nodes and edges.
+    </translation>
+  <translation id="modal.queryDocumentation.cypher.write.title">Write operations</translation>
+  <translation id="modal.queryDocumentation.cypher.write.1">
+      A few users can run write queries on the database. They must re-index it once operations are done.
+      Cypher queries must end with <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph>RETURN<ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph> to explicitly return nodes and edges.
+    </translation>
+  <translation id="modal.queryDocumentation.cypher.volume.title">Volume limits</translation>
+  <translation id="modal.queryDocumentation.cypher.volume.1">
+      The Linkurious server enforces a limit of <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph><ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph><ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph> results returned per query
+      to avoid client instability issues. Contact your administrator to change this limit.
+    </translation>
+  <translation id="modal.queryDocumentation.cypher.timeout.title">Timeout</translation>
+  <translation id="modal.queryDocumentation.cypher.timeout.1">
+      The Linkurious server will abort queries that take more than
+      <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph><ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph><ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph> seconds to complete.
+    </translation>
+  <translation id="modal.queryDocumentation.gremlin.1">
+      Pattern matching is performed using a graph query language.
+      Linkurious supports <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph>Gremlin<ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph> to query TitanDB and other compatible databases.
+    </translation>
+  <translation id="modal.queryDocumentation.gremlin.2">
+      Read the Gremlin documentation in the
+      <ph name="START_LINK"><ex>&lt;a&gt;</ex></ph>
+        Apache TinkerPop manual
+      <ph name="CLOSE_LINK"><ex>&lt;/a&gt;</ex></ph> to learn more.
+    </translation>
+  <translation id="modal.queryDocumentation.gremlin.readOnly.title">Read-only operations</translation>
+  <translation id="modal.queryDocumentation.gremlin.readOnly">
+      The operations are restricted to read-only queries to avoid accidental data corruption and crash of the
+      database server. Gremlin scripts must use the <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph>g<ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph> graph traversal.
+      Gremlin scripts must return nodes and edges (called vertices and edges in Gremlin).
+    </translation>
+  <translation id="modal.queryDocumentation.gremlin.write.title">Write operations</translation>
+  <translation id="modal.queryDocumentation.gremlin.write">
+      Selected users can run write queries on the database.
+      After doing so, they must re-index the database to ensure that the full-text index is up to date.
+    </translation>
+  <translation id="modal.queryDocumentation.gremlin.volume.title">Volume limits</translation>
+  <translation id="modal.queryDocumentation.gremlin.volume">
+      Users writing Gremlin script must make sure that their scripts don&apos;t return too many nodes and edges by using <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph>limit<ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph> filters.
+    </translation>
+  <translation id="modal.queryDocumentation.gremlin.restrictions.title">Gremlin restrictions</translation>
+  <translation id="modal.queryDocumentation.gremlin.restrictions">
+      Operations using the <ph name="START_TAG_STRONG"><ex>&lt;strong&gt;</ex></ph>graph<ph name="CLOSE_TAG_STRONG"><ex>&lt;/strong&gt;</ex></ph> object itself are prohibited.
+    </translation>
+  <translation id="modal.about.rights">
+    Linkurious SAS © 2017. All rights reserved.
+  </translation>
+  <translation id="modal.about.infos">
+    Visit <ph name="START_LINK"><ex>&lt;a&gt;</ex></ph>our website<ph name="CLOSE_LINK"><ex>&lt;/a&gt;</ex></ph> for information about the company and our products.
+  </translation>
+  <translation id="modal.about.contact">
+    Contact <ph name="START_LINK"><ex>&lt;a&gt;</ex></ph>support@linkurio.us<ph name="CLOSE_LINK"><ex>&lt;/a&gt;</ex></ph> for any question.
+  </translation>
+  <translation id="modal.about.upToDate">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Linkurious is up-to-date. You can read a french poem <ph name="START_TAG_SPAN"><ex>&lt;span&gt;</ex></ph>here<ph name="CLOSE_TAG_SPAN"><ex>&lt;/span&gt;</ex></ph>.
+    </translation>
+  <translation id="modal.about.downloadLastVersion">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Version <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> is available for download <ph name="START_LINK"><ex>&lt;a&gt;</ex></ph>here<ph name="CLOSE_LINK"><ex>&lt;/a&gt;</ex></ph>.
+    </translation>
+  <translation id="modal.createVisualization.infos">This visualization has not been saved. Save it to access it later</translation>
+  <translation id="title">Title</translation>
+  <translation id="save">
+        Save
+      </translation>
+  <translation id="modal.saveVisualization.infos">This visualization has not been saved. Save it to access it later</translation>
+  <translation id="untitledVisualization">Untitled visualization</translation>
+  <translation id="modal.export.data">
+      DATA
+    </translation>
+  <translation id="modal.export.image">
+      IMAGE
+    </translation>
+  <translation id="modal.export.xlsx.infos">
+        A single workbook that contains a spreadsheet of nodes and a spreadsheet of edges.
+      </translation>
+  <translation id="download">
+        <ph name="START_TAG_BUTTON"><ex>&lt;button&gt;</ex></ph>Download<ph name="CLOSE_TAG_BUTTON"><ex>&lt;/button&gt;</ex></ph>
+      </translation>
+  <translation id="modal.export.csv.infos">
+        Nodes and edges are in separate spreadsheets to open with OpenOffice or any text processor.
+      </translation>
+  <translation id="modal.export.gexf.infos">
+        GEXF is an XML dialect to encode graph data. This file format is notably supported by Gephi and NetworkX.
+      </translation>
+  <translation id="modal.export.graphml.infos">
+        GraphML is an XML dialect to encode graph data. This file format is notably supported by Gephi, yEd, NetworkX, and NodeXL.
+      </translation>
+  <translation id="modal.export.json.infos">
+        Lightweight data-interchange format.
+      </translation>
+  <translation id="modal.export.png.infos">
+        Bitmaps can be easily added into reports and presentations.
+      </translation>
+  <translation id="modal.export.svg.infos">
+        Vector graphics can be edited in Inkscape or Adobe Illustrator. Ideal for print.
+      </translation>
+  <translation id="propertyName">
+        Name
+      </translation>
+  <translation id="updateNodeModal.placeholder.propertyKey">Property name</translation>
+  <translation id="value">Value</translation>
+  <translation id="updateNodeModal.conflict.info">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> The current node is outdated.
+    You can save your changes anyway, or reload the node and discard them.
+  </translation>
+  <translation id="updateEdgeModal.conflict.info">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> The current edge is outdated.
+    You can save your changes anyway, or reload the edge and discard them.
+  </translation>
+  <translation id="updateNodeModal.error.maxNodeCategories">
+      Nodes can only have <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> categories attached to it.
+    </translation>
+  <translation id="updateNodeModal.error.minCategories">
+    There&apos;s not enough categories for this node.
+  </translation>
+  <translation id="navigation.alerts">
+              Alerts
+            </translation>
+  <translation id="navigation.visualizations">
+            Visualizations
+          </translation>
+  <translation id="navigation.admin">Admin</translation>
+  <translation id="navigation.admin.status">
+            <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+            Status
+          </translation>
+  <translation id="navigation.admin.data">
+            <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+            Data
+          </translation>
+  <translation id="navigation.admin.sources">
+            <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+            Sources
+          </translation>
+  <translation id="navigation.admin.alerts">
+            <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+            Alerts
+          </translation>
+  <translation id="navigation.admin.users">
+            <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+            Users
+          </translation>
+  <translation id="navigation.openDocumentation">
+            <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+            Open documentation
+          </translation>
+  <translation id="navigation.signOut">
+            <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+            Sign out
+          </translation>
+  <translation id="navigation.about">
+            <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+            About
+          </translation>
+  <translation id="breadcrumb.home">Home</translation>
+  <translation id="tree.folder.root">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> My visualizations
+        <ph name="START_TAG_SPAN"><ex>&lt;span&gt;</ex></ph>
+              <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+        <ph name="CLOSE_TAG_SPAN"><ex>&lt;/span&gt;</ex></ph>
+      </translation>
+  <translation id="tree.folder.shared">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Shared with me
+        <ph name="START_TAG_SPAN"><ex>&lt;span&gt;</ex></ph>
+              <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+        <ph name="CLOSE_TAG_SPAN"><ex>&lt;/span&gt;</ex></ph>
+      </translation>
+  <translation id="results.noResults">
+    No result found.
+  </translation>
+  <translation id="results.pagination.previous">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        previous
+      </translation>
+  <translation id="results.pagination.next">
+        next
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      </translation>
+  <translation id="results.addAll.undefined">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        add all matching <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> (max:<ph name="INTERPOLATION_1"><ex>INTERPOLATION_1</ex></ph>)
+      </translation>
+  <translation id="results.addAll.exact">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Add <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> matching <ph name="INTERPOLATION_1"><ex>INTERPOLATION_1</ex></ph>
+      </translation>
+  <translation id="results.addAll.max">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Add <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> matching <ph name="INTERPOLATION_1"><ex>INTERPOLATION_1</ex></ph>
+      </translation>
+  <translation id="results.addAll">
+      Add all
+    </translation>
+  <translation id="close">
+      Close
+    </translation>
+  <translation id="workspaceMenu.tabs.find">Find</translation>
+  <translation id="workspaceMenu.tabs.geo">Geo</translation>
+  <translation id="workspaceMenu.tabs.editMode">Edit</translation>
+  <translation id="workspaceMenu.create">Create new visualization</translation>
+  <translation id="workspaceMenu.save"><ph name="START_BOLD_TEXT"><ex>&lt;b&gt;</ex></ph>Save this visualization<ph name="CLOSE_BOLD_TEXT"><ex>&lt;/b&gt;</ex></ph></translation>
+  <translation id="workspaceMenu.duplicate">Save as...</translation>
+  <translation id="workspaceMenu.delete">Delete this visualization</translation>
+  <translation id="workspaceMenu.share">Share this visualization</translation>
+  <translation id="workspaceMenu.publish">Publish this visualization</translation>
+  <translation id="workspaceMenu.updateWidget">Manage online publication</translation>
+  <translation id="workspaceMenu.export">Export this visualization</translation>
+  <translation id="workspaceMenu.dashboard">Go to dashboard</translation>
+  <translation id="workspaceMenu.preferences">Preferences</translation>
+  <translation id="workspaceMenu.about">About Linkurious</translation>
+  <translation id="graph.nodes">Nodes</translation>
+  <translation id="graph.edges">Edges</translation>
+  <translation id="paths">Paths</translation>
+  <translation id="patterns">Patterns</translation>
+  <translation id="search.input.placeholder">Type to search <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>...</translation>
+  <translation id="search.button.allCategories">
+        All <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+      </translation>
+  <translation id="search.button.options">
+    Options
+  </translation>
+  <translation id="search.button.syntax">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Syntax
+  </translation>
+  <translation id="search.button.filter.infos">
+    Add contraints to the main query.
+  </translation>
+  <translation id="search.fuzziness.fuzzy">Fuzzy</translation>
+  <translation id="search.fuzziness.strict">Strict matching</translation>
+  <translation id="searchQuery.button.preview">
+      preview results
+    </translation>
+  <translation id="searchQuery.button.running"><ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> running</translation>
+  <translation id="searchQuery.button.dialectModal">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> What is <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+  </translation>
+  <translation id="shortestPath.startNode.placeholder">Choose starting node...</translation>
+  <translation id="shortestPath.destinationNode.placeholder">Choose destination node...</translation>
+  <translation id="shortestPath.button.submit">
+      find shortest path
+    </translation>
+  <translation id="selectionPanel.visualization.title">
+  Visualization
+</translation>
+  <translation id="selectionPanel.visualization.unsaved">Untitled visualization</translation>
+  <translation id="selectionPanel.visualization.readOnly">
+          READ ONLY
+        </translation>
+  <translation id="selectionPanel.visualization.pin">
+          <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Pinned nodes
+        </translation>
+  <translation id="selectionPanel.visualization.edited">
+          Edited on <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+        </translation>
+  <translation id="selectionPanel.visualization.save">
+      Save...
+    </translation>
+  <translation id="actionBar.select">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+    Select...
+  </translation>
+  <translation id="actionBar.create">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+    Create...
+  </translation>
+  <translation id="actionBar.deselect">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+    Deselect
+  </translation>
+  <translation id="actionBar.hide">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+    Hide...
+  </translation>
+  <translation id="actionBar.expand">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+    Expand...
+  </translation>
+  <translation id="actionBar.collpase">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+    Collapse
+  </translation>
+  <translation id="actionBar.select.allNodes">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Select all nodes
+    </translation>
+  <translation id="actionBar.select.neighbors">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Select neighbors
+    </translation>
+  <translation id="actionBar.select.leafs">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Select leaf nodes
+    </translation>
+  <translation id="actionBar.select.isolate">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Select isolates
+    </translation>
+  <translation id="actionBar.select.lasso">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph>
+
+      <ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Toggle lasso
+      <ph name="START_TAG_SPAN_1"><ex>&lt;span&gt;</ex></ph>
+        <ph name="START_TAG_SPAN"><ex>&lt;span&gt;</ex></ph><ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> <ph name="START_BOLD_TEXT"><ex>&lt;b&gt;</ex></ph>Shift<ph name="CLOSE_BOLD_TEXT"><ex>&lt;/b&gt;</ex></ph><ph name="CLOSE_TAG_SPAN"><ex>&lt;/span&gt;</ex></ph>or
+        <ph name="START_TAG_SPAN"><ex>&lt;span&gt;</ex></ph><ph name="START_BOLD_TEXT"><ex>&lt;b&gt;</ex></ph>Space<ph name="CLOSE_BOLD_TEXT"><ex>&lt;/b&gt;</ex></ph><ph name="CLOSE_TAG_SPAN"><ex>&lt;/span&gt;</ex></ph>
+      <ph name="CLOSE_TAG_SPAN"><ex>&lt;/span&gt;</ex></ph>
+    </translation>
+  <translation id="actionBar.select.allEdges">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Select all edges
+    </translation>
+  <translation id="actionBar.select.inverse">
+      Inverse selection
+    </translation>
+  <translation id="actionBar.hide.selectedNodes">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Hide selected nodes
+    </translation>
+  <translation id="actionBar.hide.unselectedNodes">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Hide unselected nodes
+    </translation>
+  <translation id="actionBar.hide.selectedEdges">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Hide selected edges
+    </translation>
+  <translation id="actionBar.hide.unselectedEdges">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Hide unselected edges
+    </translation>
+  <translation id="actionBar.expand.summary">
+      Get all (<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> edges and <ph name="INTERPOLATION_1"><ex>INTERPOLATION_1</ex></ph> <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> nodes)
+    </translation>
+  <translation id="actionBar.expand.byCategory">
+        Get <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> <ph name="START_BOLD_TEXT"><ex>&lt;b&gt;</ex></ph><ph name="INTERPOLATION_1"><ex>INTERPOLATION_1</ex></ph><ph name="CLOSE_BOLD_TEXT"><ex>&lt;/b&gt;</ex></ph> with
+        <ph name="INTERPOLATION_2"><ex>INTERPOLATION_2</ex></ph> <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> <ph name="START_BOLD_TEXT"><ex>&lt;b&gt;</ex></ph><ph name="INTERPOLATION_3"><ex>INTERPOLATION_3</ex></ph><ph name="CLOSE_BOLD_TEXT"><ex>&lt;/b&gt;</ex></ph>
+      </translation>
+  <translation id="actionBar.more.collapse">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Collapse
+    </translation>
+  <translation id="actionBar.more.shortestPathFrom">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Find shortest path from here
+    </translation>
+  <translation id="actionBar.more.shortestPathTo">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Find shortest path to here
+    </translation>
+  <translation id="actionBar.more.pin">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Pin
+    </translation>
+  <translation id="actionBar.more.unpin">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Unpin
+    </translation>
+  <translation id="actionBar.more.hideAll">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Hide all
+    </translation>
+  <translation id="actionBar.more.unpinAll">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Unpin all nodes
+    </translation>
+  <translation id="actionBar.more.createNode">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Create new <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> node
+    </translation>
+  <translation id="actionBar.more.createEdge">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Create new <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> edge
+    </translation>
+  <translation id="actionBar.more.editSelection">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Edit selection
+    </translation>
+  <translation id="actionBar.more.deleteSelection">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Delete selection
+    </translation>
+  <translation id="actionBar.more.resetGeoCoordinates">
+      <ph name="START_TAG_SPAN"><ex>&lt;span&gt;</ex></ph>
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      <ph name="CLOSE_TAG_SPAN"><ex>&lt;/span&gt;</ex></ph>
+      Reset geographic coordinates
+    </translation>
+  <translation id="actionBar.more.screenShot">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Take screenshot
+    </translation>
+  <translation id="actionBar.create.node">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Create new node
+    </translation>
+  <translation id="actionBar.create.edge">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Create new edge
+    </translation>
+  <translation id="selectionPanel.nodes.title">
+  <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> selected nodes
+</translation>
+  <translation id="selectionPanel.nodes.pin">
+          <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Pinned
+        </translation>
+  <translation id="selectionPanel.edges.title">
+  <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> selected edges
+</translation>
+  <translation id="nodePanel.noSelection.title">
+  <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> nodes / <ph name="INTERPOLATION_1"><ex>INTERPOLATION_1</ex></ph> in
+  database
+</translation>
+  <translation id="nodePanel.noSelection.filterPlaceholder">Find a node in the list...</translation>
+  <translation id="nodePanel.noSelection.filterLabel">List filtered by : </translation>
+  <translation id="nodePanel.noSelection.createNode">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Create new node
+      </translation>
+  <translation id="nodePanel.selection.title">
+  Properties
+</translation>
+  <translation id="nodePanel.selection.filterPlaceholder">Find a property in the list...</translation>
+  <translation id="nodePanel.selection.addProperty">
+          <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Add property
+        </translation>
+  <translation id="edgePanel.noSelection.title">
+  <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> edges / <ph name="INTERPOLATION_1"><ex>INTERPOLATION_1</ex></ph>
+  in database
+</translation>
+  <translation id="edgePanel.noSelection.filterLabel">List filtered by : </translation>
+  <translation id="edgePanel.noSelection.createEdge">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Create new edge
+      </translation>
+  <translation id="edgePanel.selection.title">
+  Properties
+</translation>
+  <translation id="edgePanel.selection.searchPlaceholder">Find an edge in the list...</translation>
+  <translation id="edgePanel.selection.noProperties">
+      There&apos;s no properties for this edge.
+    </translation>
+  <translation id="controls.layouts.incremental">Incremental expand</translation>
+  <translation id="controls.layout.force.title">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Force-directed layout
+    </translation>
+  <translation id="controls.layouts.force.best">Best mode</translation>
+  <translation id="controls.layouts.force.fast">Fast mode</translation>
+  <translation id="controls.layout.hierarchical.title">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Hierarchical layout
+    </translation>
+  <translation id="controls.layouts.hierarchical.topBottom">Top to bottom</translation>
+  <translation id="controls.layouts.hierarchical.bottomTop">Bottom to top</translation>
+  <translation id="controls.layouts.hierarchical.leftRight">Left to Right</translation>
+  <translation id="controls.layouts.hierarchical.rightLeft">Right to left</translation>
+  <translation id="controls.layout.radial.title">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Radial layout
+    </translation>
+  <translation id="controls.layouts.radial.best">Best mode</translation>
+  <translation id="controls.layouts.radial.fast">Fast mode</translation>
+  <translation id="workspaceOptions.tabs.captions">Captions</translation>
+  <translation id="workspaceOptions.tabs.design">Design</translation>
+  <translation id="workspaceOptions.tabs.tooltips">Tooltips</translation>
+  <translation id="captionPanel.propertyPlaceholder">Click on a property below to add it to captions.</translation>
+  <translation id="captionsPanel.reset">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Reset
+    </translation>
+  <translation id="nodes">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Nodes
+  </translation>
+  <translation id="edges">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Edges
+  </translation>
+  <translation id="designPanel.node.search.placeholder">Find a property...</translation>
+  <translation id="designPanel.download">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Download
+    </translation>
+  <translation id="designPanel.reset">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Reset
+    </translation>
+  <translation id="designPanel.edge.search.placeholder">Find a property...</translation>
+  <translation id="7000181051200783914" desc="fields.infos">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Select which properties to display in the tooltips. Drag and drop the properties to order them.
+    </translation>
+  <translation id="tooltip.node.expand">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Expand...
+    </translation>
+  <translation id="tooltip.node.collapse">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Collapse...
+    </translation>
+  <translation id="tooltip.node.hide">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Hide
+    </translation>
+  <translation id="tooltip.node.pin">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Pin
+    </translation>
+  <translation id="tooltip.node.edit">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Edit
+    </translation>
+  <translation id="tooltip.node.delete">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Delete
+    </translation>
+  <translation id="tooltip.node.shortestPathFrom">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Find shortest path from here
+    </translation>
+  <translation id="tooltip.node.shortestPathTo">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Find shortest path to here
+    </translation>
+  <translation id="tooltip.edge.hide">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Hide
+    </translation>
+  <translation id="tooltip.edge.edit">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Edit
+    </translation>
+  <translation id="tooltip.edge.delete">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+      Delete
+    </translation>
+  <translation id="tooltip.back.createNode">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Create new <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> node
+      </translation>
+  <translation id="tooltip.back.createEdge">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Create new <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> edge
+      </translation>
+  <translation id="tooltip.back.selectAll">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Select all <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> nodes
+      </translation>
+  <translation id="tooltip.back.selectLeaf">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Select <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> leaf nodes
+      </translation>
+  <translation id="tooltip.back.selectIsolates">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Select <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> isolates
+      </translation>
+  <translation id="tooltip.back.toggleLasso">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph>
+
+        <ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Toggle Lasso
+      </translation>
+  <translation id="tooltip.back.selectEdges">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Select all <ph name="START_ITALIC_TEXT_1"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> edges
+      </translation>
+  <translation id="tooltip.back.hideSelectedNodes">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        hide selection
+      </translation>
+  <translation id="tooltip.back.hideSelectedEdges">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        hide selection
+      </translation>
+  <translation id="tooltip.back.hide">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Hide all
+      </translation>
+  <translation id="tooltip.back.unPin">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Unpin all nodes
+      </translation>
+  <translation id="tooltip.back.screenshot">
+        <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+        Take screenshot
+      </translation>
+  <translation id="notification.error.classic">
+    <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> error : <ph name="INTERPOLATION_1"><ex>INTERPOLATION_1</ex></ph> (<ph name="INTERPOLATION_2"><ex>INTERPOLATION_2</ex></ph>)
+  </translation>
+  <translation id="notification.error.critical">
+    Internal <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> error, please try again.
+  </translation>
+  <translation id="oauth.error">
+               A problem occurs during authentication
+            </translation>
+  <translation id="oauth.button.retry">
+                  Retry
+               </translation>
+  <translation id="oauth.button.redirect">
+                  <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>  Back to login page
+               </translation>
+  <translation id="oauth.authenticating">Authenticating...</translation>
+  <translation id="datasource.offline.title.label">
+  <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+  Oops, <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> (<ph name="INTERPOLATION_1"><ex>INTERPOLATION_1</ex></ph>).
+</translation>
+  <translation id="datasource.offline.error.intro">Possible causes for this issue:</translation>
+  <translation id="datasource.offline.error.serverOffline">
+      The graph database server is not started.
+    </translation>
+  <translation id="datasource.offline.error.serverTimeout">
+      The graph database server is taking time to respond, it may be under heavy load.
+    </translation>
+  <translation id="datasource.offline.error.missConfiguration">
+      The username and password for this database are incorrect in the configuration.
+    </translation>
+  <translation id="datasource.offline.error.noNetwork">
+      The server of Linkurious has lost network connectivity to the graph database server.
+    </translation>
+  <translation id="datasource.offline.indexError.serverOffline">
+      The index server is not started.
+    </translation>
+  <translation id="datasource.offline.indexError.timeout">
+      The index server is taking time to respond, it may be under heavy load.
+    </translation>
+  <translation id="datasource.offline.indexError.noNetwork">
+      The server of Linkurious has lost network connectivity to the index server.
+    </translation>
+  <translation id="datasource.offline.error.label">Error message :</translation>
+  <translation id="check.configuration">
+    Check configuration
+  </translation>
+  <translation id="try.reconnect">
+    Try to reconnect
+  </translation>
+  <translation id="datasource.needAdmin">
+  Please contact an administrator if the issue remains for more than a few minutes.
+</translation>
+  <translation id="datasource.connecting.title">
+  Linkurious tries to connect to the database &quot;<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>&quot;
+</translation>
+  <translation id="datasource.connecting.infos">
+    It will take less than 60 seconds.
+    You will be redirected once it is finished.
+  </translation>
+  <translation id="datasource.needConfig.title">
+  New database connection
+</translation>
+  <translation id="datasource.needConfig.intro.1">
+      It is the first time Linkurious connects to the database &quot;<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>&quot;. It is
+      recommended for large databases to configure now which properties of nodes and edges will be
+      available and searchable by Linkurious users.
+    </translation>
+  <translation id="datasource.needConfig.intro.2"><ph name="START_BOLD_TEXT"><ex>&lt;b&gt;</ex></ph>Linkurious users will not have access to unavailable properties.<ph name="CLOSE_BOLD_TEXT"><ex>&lt;/b&gt;</ex></ph></translation>
+  <translation id="datasource.needConfig.intro.3">Don&apos;t worry. You can always change these settings later in <ph name="START_BOLD_TEXT"><ex>&lt;b&gt;</ex></ph>Admin<ph name="CLOSE_BOLD_TEXT"><ex>&lt;/b&gt;</ex></ph> panel</translation>
+  <translation id="configure.node.properties">
+      configure node properties
+    </translation>
+  <translation id="datasource.needConfig.betweenButtons.label">or skip configuration and</translation>
+  <translation id="start.indexing">
+      Start indexing
+    </translation>
+  <translation id="datasource.needConfig.needAdmin.intro">The database &quot;<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>&quot; needs to be configurated.</translation>
+  <translation id="datasource.needConfig.needAdmin.contact">Please contact an administrator to resolve this issue.</translation>
+  <translation id="datasource.needConfig.nodeConfig.intro">
+    Both node and edge property keys used in the graph database are listed below due to limitations
+    of the graph database. You can sill configure node property keys separately from edge property
+    keys. The property keys which do not exist will be ignored. Accurate lists will be available
+    in the <ph name="START_BOLD_TEXT"><ex>&lt;b&gt;</ex></ph>Admin<ph name="CLOSE_BOLD_TEXT"><ex>&lt;/b&gt;</ex></ph> panel after indexing the database.
+  </translation>
+  <translation id="datasource.needConfig.nodeConfig.title">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Node properties
+  </translation>
+  <translation id="datasource.needConfig.nodeConfig.infos">
+    Configure which node properties can be accessed by Linkurious and which will be available in
+    search results. fewer properties will result in faster indexing of the graph database.
+  </translation>
+  <translation id="datasource.needConfig.nodeConfig.button.back">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Information
+    </translation>
+  <translation id="configure.edge.properties">
+      configure edge properties
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+    </translation>
+  <translation id="datasource.needConfig.edgeConfig.intro">
+    Both node and edge property keys used in the graph database are listed below due to limitations
+    of the graph database. You can sill configure node property keys separately from edge property
+    keys. The property keys which do not exist will be ignored. Accurate lists will be available
+    in the <ph name="START_BOLD_TEXT"><ex>&lt;b&gt;</ex></ph>Admin<ph name="CLOSE_BOLD_TEXT"><ex>&lt;/b&gt;</ex></ph> panel after indexing the database.
+  </translation>
+  <translation id="datasource.needConfig.edgeConfig.title">
+    <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Edge properties
+  </translation>
+  <translation id="datasource.needConfig.edgeConfig.infos">
+    Configure which edge properties can be accessed by Linkurious and which will be available in
+    search results. fewer properties will result in faster indexing of the graph database.
+  </translation>
+  <translation id="datasource.needConfig.edgeConfig.button.back">
+      <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph> Information
+    </translation>
+  <translation id="datasource.needIndex.title">
+  <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> needs to be indexed.
+</translation>
+  <translation id="datasource.needIndex.intro">
+    The database &quot;<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>&quot; needs to be indexed at least once before it can be used.
+  </translation>
+  <translation id="datasource.needIndex.error">The last indexing has failed with errors :</translation>
+  <translation id="datasource.needIndex.startIndexing.intro">
+    Click on the &quot;Start indexing&quot; button to start the indexing
+  </translation>
+  <translation id="indexing.start">
+    Start indexing
+  </translation>
+  <translation id="configure.properties">
+    configure properties
+  </translation>
+  <translation id="datasource.needIndex.needAdmin">
+  Please contact an administrator to resolve this issue.
+</translation>
+  <translation id="datasource.indexing.title">
+  The source <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> is currently indexing
+</translation>
+  <translation id="datasource.indexing.wait">
+    Please wait while Linkurious indexes the database.
+  </translation>
+  <translation id="datasource.needReindex.title">
+  <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> needs to be re-indexed.
+</translation>
+  <translation id="datasource.needReindex.error.infos">
+    Some indexable properties have been changed since the last indexing in the database &quot;<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>&quot;.
+  </translation>
+  <translation id="datasource.needReindex.vendorChanged.infos">
+      Last indexing for database &quot;<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>&quot; has failed with errors.
+    </translation>
+  <translation id="datasource.needReindex.details">
+    Details : <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+  </translation>
+  <translation id="datasource.needReindex.startIndexing.intro">
+    Click on the &quot;Start indexing&quot; button to start the indexing :
+  </translation>
+  <translation id="datasource.needReindex.needAdmin">
+  Please contact an administrator to resolve this issue.
+</translation>
+  <translation id="propConfiguration.properties.all">
+    All (<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>)
+  </translation>
+  <translation id="propConfiguration.properties.available">
+    Available (<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>)
+  </translation>
+  <translation id="propConfiguration.properties.unavailable">
+    Unavailable (<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>)
+  </translation>
+  <translation id="propConfiguration.properties.searchable">
+    Searchable (<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>)
+  </translation>
+  <translation id="propConfiguration.properties.find">Find properties...</translation>
+  <translation id="propConfiguration.available">Available</translation>
+  <translation id="propConfiguration.searchable">Searchable</translation>
+  <translation id="propConfiguration.noProperties">
+        No property for &quot;<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>&quot;.
+      </translation>
+  <translation id="propConfiguration.set.allAvailable">
+    Set all available
+  </translation>
+  <translation id="propConfiguration.set.allUnavailable">
+    Set all unavailable
+  </translation>
+  <translation id="propConfiguration.set.allSearchable">
+    Set all searchable
+  </translation>
+  <translation id="propConfiguration.set.unSearchable">
+    Set all unsearchable
+  </translation>
+  <translation id="offline.title">
+          <ph name="START_ITALIC_TEXT"><ex>&lt;i&gt;</ex></ph><ph name="CLOSE_ITALIC_TEXT"><ex>&lt;/i&gt;</ex></ph>
+          Oops, could not connect to Linkurious server...
+        </translation>
+  <translation id="offline.needAdmin">
+          Please contact an administrator if the issue remains for more than a few minutes.
+        </translation>
+  <translation id="offline.button.retry">
+          Retry connecting
+        </translation>
+  <translation id="codeEditor.placeholder">Enter a  query returning nodes and edges</translation>
+  <translation id="aboutLkeModal.title">About Linkurious<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+    </translation>
+  <translation id="preferencesModal.title">Preferences</translation>
+  <translation id="saveVisualizationModal.title">Save visualization</translation>
+  <translation id="deleteVisualizationConfirm.title">delete visualization</translation>
+  <translation id="deleteVisualizationConfirm.content">Are you sure to delete this visualization ?</translation>
+  <translation id="shareVisualizationModal.title">share visualization &quot;<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>&quot;</translation>
+  <translation id="duplicateVisualizationModal.title">duplicate visualization</translation>
+  <translation id="exportVisualizationModal.title">export visualization</translation>
+  <translation id="queryResultsModal.title">patterns: preview of <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>
+    results</translation>
+  <translation id="saveQueryModal.title">Save query</translation>
+  <translation id="getQueriesModal.title">Queries</translation>
+  <translation id="queryDocModal.title">Pattern matching</translation>
+  <translation id="aboutLkeModal.checkForUpdate">Check for update</translation>
+  <translation id="createVisualizationModal.button.exit">Exit without saving</translation>
+  <translation id="visualization.untitled">Untitled visualization</translation>
+  <translation id="getQueries.modal.button.delete">Delete</translation>
+  <translation id="getQueries.modal.button.load">Load</translation>
+  <translation id="queryResultsModal.button.addAll">Add all</translation>
+  <translation id="createFolderModal.title">create folder</translation>
+  <translation id="renameFolderModal.title">rename folder</translation>
+  <translation id="moveFolderModal.title">move folder</translation>
+  <translation id="moveVisualizationModal.title">move visualization</translation>
+  <translation id="renameVisualizationModal.title">rename visualization</translation>
+  <translation id="deleteFolderModal.title">delete folder</translation>
+  <translation id="deleteFolderModal.content">Are you sure to delete this folder ?</translation>
+  <translation id="editNodePropertyModal.title">edit node property</translation>
+  <translation id="deleteNodePropertyConfirm.title">delete node property</translation>
+  <translation id="deleteNodePropertyConfirm.content">Are you sure to delete the property <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> of value &quot;<ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph>&quot; ?</translation>
+  <translation id="selectIcon.title">Select icon for <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph></translation>
+  <translation id="deleteNodeModal.title">delete node</translation>
+  <translation id="deleteNodeModal.content">Are you sure to delete this node ? This action will be irreversible</translation>
+  <translation id="deleteEdgeModal.title">delete edge</translation>
+  <translation id="deleteEdgeModal.content">Are you sure to delete this edge ? This action will be irreversible</translation>
+  <translation id="hideAllModal.title">hide all</translation>
+  <translation id="hideAllModal.content">Are you sure you want to hide everything ?</translation>
+  <translation id="expandNodeModal.title">Expand node</translation>
+  <translation id="expandModal.button.expand">Expand</translation>
+  <translation id="vizLocked.title">Visualization currently edited by another user</translation>
+  <translation id="vizLocked.button.takeover">take over</translation>
+  <translation id="vizLocked.button.reload">reload to see last change</translation>
+  <translation id="vizLocked.button.ignore">ignore and turn-off autosave</translation>
+  <translation id="updateNodeModal.conflict.reload">reload node</translation>
+  <translation id="updateNodeModal.conflict.forceSave">save anyway</translation>
+  <translation id="updateNodeModal.button.save">save</translation>
+  <translation id="updateNodePropertyModal.conflict.reload">reload node</translation>
+  <translation id="updateNodePropertyModal.conflict.forceSave">save anyway</translation>
+  <translation id="updateEdgeModal.conflict.reload">reload edge</translation>
+  <translation id="widgetModal.title">publish online</translation>
+  <translation id="widgetModal.button.publish">Publish</translation>
+  <translation id="widgetModal.success.publish">Widget successfully created.</translation>
+  <translation id="widgetModal.success.update">Widget successfully updated.</translation>
+  <translation id="widgetModal.success.delete">Widget successfully deleted.</translation>
+  <translation id="widgetModal.button.unpublish">UnPublish</translation>
+  <translation id="widgetModal.button.done">I&apos;m done</translation>
+  <translation id="widgetModal.button.update">Update</translation>
+  <translation id="preferencesModal.submit">OK</translation>
+  <translation id="workspace.prompt">Changes you made may not be saved.</translation>
+  <translation id="deleteVisualizationConfirm.button.confirm">Delete the visualization</translation>
+  <translation id="addNodePropertyModal.title">Add a node property</translation>
+  <translation id="addEdgePropertyModal.title">Add an edge property</translation>
+  <translation id="createNodeModal.title">Create node</translation>
+  <translation id="deleteSelectionConfirm.title">Delete <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> <ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> ?</translation>
+  <translation id="deleteSelectionConfirm.content">Are you sure you want to delete those elements ? This action will be irreversible.</translation>
+  <translation id="deleteSelectionConfirm.success"><ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> has been successfully deleted.</translation>
+  <translation id="deleteEdgeConfirm.success">Edge has been successfully deleted.</translation>
+  <translation id="deleteNodeConfirm.success">Edge has been successfully deleted.</translation>
+  <translation id="resultQuery.error.title"><ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> error</translation>
+  <translation id="resultQuery.error.content"><ph name="INTERPOLATION"><ex>INTERPOLATION</ex></ph> error</translation>
+  <translation id="addNodes">add nodes</translation>
+  <translation id="addNodesSans">add nodes</translation>
+  <translation id="createNodes">create nodes</translation>
+  <translation id="createNodesSans">create nodes</translation>
+  <translation id="addEdges">add edges</translation>
+  <translation id="moveNodes">move nodes</translation>
+  <translation id="moveNodesSans">move nodes</translation>
+  <translation id="moveGeoNodes">move nodes</translation>
+  <translation id="moveGeoNodesSans">move nodes</translation>
+  <translation id="resetCoordinates">reset nodes coordinates</translation>
+  <translation id="updateNode">update nodes</translation>
+  <translation id="updateEdge">update edges</translation>
+  <translation id="addFullEdge">add edges</translation>
+  <translation id="expand">expand nodes</translation>
+  <translation id="collapse">collapse nodes</translation>
+  <translation id="addShortestPath">add shortest path</translation>
+  <translation id="pin">pin nodes</translation>
+  <translation id="unpin">unpin nodes</translation>
+  <translation id="hideNodes">hide nodes</translation>
+  <translation id="hideEdges">hide edges</translation>
+  <translation id="runLayout">run layout</translation>
+  <translation id="changeLayout">change layout</translation>
+</translationbundle>

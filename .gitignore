@@ -1,2 +1,3 @@
-dashboard/neo4j/*
-linkurious-linux/*
+dashboard/neo4j
+linkurious-linux/system/elasticsearch/data/elasticsearch/nodes/0/indices/*
+*.tar.gz

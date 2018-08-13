@@ -1,0 +1,489 @@
+[
+  {
+    "version": "2.2.3",
+    "comment": "Changes since 2.2.2",
+    "changes": [
+      {"type": "create", "path": "advanced.supernodeThreshold", "value": 10000}
+    ]
+  },
+  {
+    "version": "2.2.0",
+    "comment": "Changes since 2.1.8",
+    "changes": [
+      {"type": "create", "path": "guestPreferences", "value": {
+        "locale": "en-US",
+        "uiWorkspaceSearch": false,
+        "uiExport": false,
+        "uiDesign": false,
+        "uiLayout": false,
+        "uiCollapseNode": true,
+        "uiCaptionConfig": false,
+        "uiTooltipConfig": false,
+        "uiVisualizationPanel": false,
+        "uiNodeList": false,
+        "uiEdgeList": false,
+        "uiTooltip": true,
+        "uiSimpleLayout": true
+      }},
+      {"type": "create", "path": "defaultPreferences.uiWorkspaceSearch", "value": true},
+      {"type": "create", "path": "defaultPreferences.uiExport", "value": true},
+      {"type": "create", "path": "defaultPreferences.uiDesign", "value": true},
+      {"type": "create", "path": "defaultPreferences.uiLayout", "value": true},
+      {"type": "create", "path": "access.guestMode", "value": false},
+      {"type": "delete", "path": "dataSources.*.graphdb.webAdmin"},
+      {"type": "delete", "path": "dataSources.*.index.webAdmin"},
+      {"type": "create", "path": "defaultPreferences.uiSimpleLayout", "value": false}
+    ]
+  },
+  {
+    "version": "2.1.5",
+    "comment": "Changes since 2.1.4",
+    "changes": [
+      {"type": "create", "path": "ogma.settings.hover.nodeTextBackgroundColor", "value": "#FFF"},
+      {"type": "create", "path": "ogma.settings.hover.edgeTextBackgroundColor", "value": "#FFF"},
+      {"type": "create", "path": "ogma.settings.selection.nodeTextBackgroundColor", "value": "#FFF"},
+      {"type": "create", "path": "ogma.settings.selection.edgeTextBackgroundColor", "value": "#FFF"},
+      {"type": "create", "path": "ogma.settings.pulses.numberOfPulses", "value": 0},
+      {"type": "create", "path": "ogma.settings.shapes.defaultEdgeShape", "value": "arrow"}
+    ]
+  },
+  {
+    "version": "2.0.1",
+    "comment": "Changes since 2.0.0",
+    "changes": [
+      {"type": "delete", "path": "server.analytics"},
+      {"type": "delete", "path": "clientAnalytics"},
+      {"type": "delete", "path": "logger"},
+      {"type": "create", "path": "ogma", "value": {
+        "render": [
+          "canvas"
+        ],
+        "plugins": [
+          "dagre"
+        ],
+        "settings": {
+          "selection": {
+            "manual": false,
+            "outline": true,
+            "nodeOuterStrokeColor": "#F65565",
+            "nodeTextFontStyle": "bold",
+            "edgeColor": "#F65565"
+          },
+          "camera": {
+            "defaultZoomModifier": 1.382,
+            "maxZoom": 8,
+            "minZoom": 0.1
+          },
+          "halos": {
+            "nodeSize": 25,
+            "edgeSize": 20,
+            "nodeColor": "#FFFFFF",
+            "edgeColor": "#FFFFFF",
+            "nodeClustering": false,
+            "nodeClusteringMaxRadius": 80,
+            "nodeStrokeWidth": 0.5,
+            "nodeStrokeColor": "rgba(0,0,0,0)"
+          },
+          "hover": {
+            "edgeColor": "#6b6b6b",
+            "nodeOuterStrokeColor": "#FFFFFF",
+            "highlightEdgeExtremities": true,
+            "edges": true,
+            "nodeTextFontStyle": "bold",
+            "outline": true
+          },
+          "badges": {
+            "defaultColor": "#999999",
+            "defaultStrokeColor": "rgba(0,0,0,0)",
+            "defaultFont": "roboto",
+            "threshold": 8,
+            "hideStrokeOnHiddenContent": true,
+            "defaultTextColor": "white"
+          },
+          "cameraInteractions": {
+            "zoomOnDoubleClick": false,
+            "rotationEnabled": false
+          },
+          "pulses": {
+            "pulseDuration": 2500,
+            "pulseInterval": 750,
+            "numberOfPulses": 1,
+            "nodePulseStartColor": "#FFF",
+            "nodePulseEndColor": "rgba(0, 0, 0, 0)",
+            "nodePulseStartRatio": 1,
+            "nodePulseEndRatio": 5,
+            "nodePulseWidth": 5,
+            "edgePulseStartColor": "#FFF",
+            "edgePulseEndColor": "rgba(0, 0, 0, 0)",
+            "edgePulseStartRatio": 1,
+            "edgePulseEndRatio": 5,
+            "edgePulseWidth": 5
+          },
+          "render": {
+            "webGLAntiAliasing": "super-sampling",
+            "webGLFontSamplingSize": 128,
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "imgCrossOrigin": "anonymous"
+          },
+          "captor": {
+            "nodeTexts": false,
+            "edgeTexts": false,
+            "edgeErrorMargin": 10
+          },
+          "lasso": {
+            "strokeColor": "red",
+            "strokeWidth": 3
+          },
+          "shapes": {
+            "nodeInnerStrokeColor": "#FFF",
+            "defaultEdgeColor": "#A9A9A9",
+            "defaultEdgeShape": "tapered",
+            "defaultNodeColor": "#999999",
+            "nodeOuterStrokeWidth": 2
+          },
+          "icons": {
+            "defaultFont": "FontAwesome",
+            "defaultColor": "#FFF"
+          },
+          "texts": {
+            "fontFamily": "roboto",
+            "nodeFontColor": "#000",
+            "nodeBackgroundColor": "rgba(0, 0, 0, 0)",
+            "edgeBackgroundColor": "rgba(0, 0, 0, 0)",
+            "nodeFontSize": 11,
+            "nodeSizeThreshold": 5,
+            "nodeTextAlignment": "center",
+            "edgeFontSize": 11,
+            "edgeSizeThreshold": 4,
+            "nodeMaxTextLineLength": 35,
+            "preventOverlap": true,
+            "nodeBackgroundMargin": 0
+          }
+        }
+      }},
+      {"type": "create", "path": "defaultPreferences", "value": {
+        "pinOnDrag": false,
+        "locale": "en-US",
+        "uiEdgeSearch": true,
+        "uiShortestPath": true,
+        "uiCollapseNode": true,
+        "uiScreenshot": true,
+        "uiCaptionConfig": true,
+        "uiTooltipConfig": true,
+        "uiVisualizationPanel": true,
+        "uiNodeList": true,
+        "uiEdgeList": true,
+        "uiTooltip": true,
+        "uiSimpleLayout": true
+      }}
+    ]
+  },
+  {
+    "version": "2.0.0",
+    "comment": "Changes since 1.8.0",
+    "changes": [
+      {"type": "create", "path": "alerts.maxMatchTTL", "value": 0},
+      {"type": "rename", "path": "sigma.settings.defaultNodeColor", "newKey": "ogma.shapes.defaultNodeColor"},
+      {"type": "rename", "path": "sigma.settings.defaultEdgeColor", "newKey": "ogma.shapes.defaultEdgeColor"},
+      {"type": "rename", "path": "sigma.settings.defaultEdgeType", "newKey": "ogma.shapes.defaultEdgeShape"},
+      {"type": "rename", "path": "sigma.settings.defaultNodeHoverBorderColor", "newKey": "ogma.hover.nodeOuterStrokeColor"},
+      {"type": "rename", "path": "sigma.settings.hoverFontStyle", "newKey": "ogma.hover.nodeTextFontStyle"},
+      {"type": "rename", "path": "sigma.settings.edgeHoverExtremities", "newKey": "ogma.hover.highlightEdgeExtremities"},
+      {"type": "rename", "path": "sigma.settings.enableEdgeHovering", "newKey": "ogma.hover.edges"},
+      {"type": "rename", "path": "sigma.settings.defaultNodeActiveOuterBorderColor", "newKey": "ogma.selection.nodeOuterStrokeColor"},
+      {"type": "rename", "path": "sigma.settings.activeFontStyle", "newKey": "ogma.selection.nodeTextFontStyle"},
+      {"type": "rename", "path": "sigma.settings.defaultEdgeActiveColor", "newKey": "ogma.selection.edgeColor"},
+      {"type": "rename", "path": "sigma.settings.font", "newKey": "ogma.texts.fontFamily"},
+      {"type": "rename", "path": "sigma.settings.defaultLabelColor", "newKey": "ogma.texts.nodeFontColor"},
+      {"type": "rename", "path": "sigma.settings.defaultLabelSize", "newKey": "ogma.texts.nodeFontSize"},
+      {"type": "rename", "path": "sigma.settings.labelThreshold", "newKey": "ogma.texts.nodeSizeThreshold"},
+      {"type": "rename", "path": "sigma.settings.labelAlignment", "newKey": "ogma.texts.nodeTextAlignment"},
+      {"type": "rename", "path": "sigma.settings.defaultEdgeLabelSize", "newKey": "ogma.texts.edgeFontSize"},
+      {"type": "rename", "path": "sigma.settings.edgeLabelThreshold", "newKey": "ogma.texts.edgeSizeThreshold"},
+      {"type": "rename", "path": "sigma.settings.maxNodeLabelLineLength", "newKey": "ogma.texts.nodeMaxTextLineLength"},
+      {"type": "rename", "path": "sigma.settings.legendBorderWidth", "newKey": "ogma.legend.borderWidth"},
+      {"type": "rename", "path": "sigma.settings.legendBorderRadius", "newKey": "ogma.legend.borderRadius"},
+      {"type": "rename", "path": "sigma.settings.legendBorderColor", "newKey": "ogma.legend.borderColor"},
+      {"type": "rename", "path": "sigma.settings.glyphFillColor", "newKey": "ogma.badges.defaultColor"},
+      {"type": "rename", "path": "sigma.settings.glyphStrokeColor", "newKey": "ogma.badges.defaultStrokeColor"},
+      {"type": "rename", "path": "sigma.settings.glyphFont", "newKey": "ogma.badges.defaultFont"},
+      {"type": "rename", "path": "sigma.settings.glyphThreshold", "newKey": "ogma.badges.threshold"},
+      {"type": "rename", "path": "sigma.settings.glyphTextColor", "newKey": "ogma.badges.defaultTextColor"},
+      {"type": "rename", "path": "sigma.settings.nodeHaloSize", "newKey": "ogma.halos.nodeSize"},
+      {"type": "rename", "path": "sigma.settings.edgeHaloSize", "newKey": "ogma.halos.edgeSize"},
+      {"type": "rename", "path": "sigma.settings.nodeHaloColor", "newKey": "ogma.halos.nodeColor"},
+      {"type": "rename", "path": "sigma.settings.edgeHaloColor", "newKey": "ogma.halos.edgeColor"},
+      {"type": "rename", "path": "sigma.settings.nodeHaloClustering", "newKey": "ogma.halos.nodeClustering"},
+      {"type": "rename", "path": "sigma.settings.nodeHaloClusteringMaxRadius", "newKey": "ogma.halos.nodeClusteringMaxRadius"},
+      {"type": "rename", "path": "sigma.settings.nodeHaloStrokeWidth", "newKey": "ogma.halos.nodeStrokeWidth"},
+      {"type": "rename", "path": "sigma.settings.nodeHaloStrokeColor", "newKey": "ogma.halos.nodeStrokeColor"},
+      {"type": "rename", "path": "sigma.settings.edgeHoverPrecision", "newKey": "ogma.captor.edgeErrorMargin"},
+      {"type": "rename", "path": "sigma.settings.doubleClickEnabled", "newKey": "ogma.cameraInteractions.zoomOnDoubleClick"},
+      {"type": "rename", "path": "sigma.settings.zoomingRatio", "newKey": "ogma.camera.defaultZoomModifier"},
+      {"type": "rename", "path": "sigma.settings.zoomMax", "newKey": "ogma.camera.maxZoom"},
+      {"type": "rename", "path": "sigma.settings.zoomMin", "newKey": "ogma.camera.minZoom"},
+      {"type": "rename", "path": "sigma.settings.imgCrossOrigin", "newKey": "ogma.render.imgCrossOrigin"},
+      {"type": "delete", "path": "sigma"}
+    ]
+  },
+  {
+    "version": "1.8.0",
+    "comment": "Changes since 1.7.0",
+    "changes": [
+      {"type": "rename", "path": "allSources", "newKey": "advanced"}
+    ]
+  },
+  {
+    "version": "1.5.5",
+    "comment": "Changes since 1.5.4",
+    "changes": [
+      {"type": "rename", "path": "styles", "newKey": "defaultStyles"},
+      {"type": "rename", "path": "alert", "newKey": "alerts"}
+    ]
+  },
+  {
+    "version": "1.4.6",
+    "comment": "Changes since 1.4.5",
+    "changes": [
+      {"type": "create", "path": "access.defaultPage", "value": "dashboard"},
+      {"type": "create", "path": "access.defaultPageParams", "value": {}}
+    ]
+  },
+  {
+    "version": "1.3.10",
+    "comment": "Changes since 1.3.9",
+    "changes": [
+      {"type": "create", "path": "dataSources.*.readOnly", "value": false},
+      {"type": "delete", "path": "dataSources.*.index.indexName"}
+    ]
+  },
+  {
+    "version": "1.3.5",
+    "comment": "Changes since 1.3.4",
+    "changes": [{
+      "type": "create",
+      "path": "alert",
+      "value": {
+        "maxMatchTTL": 30,
+        "maxMatchesLimit": 5000,
+        "maxRuntimeLimit": 600000,
+        "maxConcurrency": 1
+      }
+    }]
+  },
+  {
+    "version": "1.3.1",
+    "comment": "Changes since 1.3.0",
+    "changes": [
+      {"type": "delete", "path": "server.analytics"},
+      {"type": "delete", "path": "dataSources.*.index.indexName"},
+      {"type": "delete", "path": "sigma.nodeActiveBorderSize"},
+      {"type": "delete", "path": "sigma.defaultNodeActiveBorderColor"}
+    ]
+  },
+  {
+    "version": "1.2.2",
+    "comment": "Changes since 1.2.1",
+    "changes": [
+      {"type": "create", "path": "advanced.layoutWorkers", "value": 2}
+    ]
+  },
+  {
+    "version": "1.1.6",
+    "comment": "Changes since 1.1.1",
+    "changes": [
+      {
+        "type": "rename",
+        "path": "sigma.settings.borderSize",
+        "newKey": "nodeHoverBorderSize"
+      },
+      {
+        "type": "rename",
+        "path": "sigma.settings.outerBorderSize",
+        "newKey": "nodeActiveOuterBorderSize"
+      },
+      {
+        "type": "create",
+        "path": "sigma.settings.nodeActiveBorderSize",
+        "value": 2
+      },
+      {
+        "type": "rename",
+        "path": "sigma.settings.defaultNodeBorderColor",
+        "newKey": "defaultNodeHoverBorderColor"
+      },
+      {
+        "type": "rename",
+        "path": "sigma.settings.defaultNodeOuterBorderColor",
+        "newKey": "defaultNodeActiveOuterBorderColor"
+      },
+      {
+        "type": "create",
+        "path": "sigma.settings.defaultNodeActiveBorderColor",
+        "value": "#ffffff"
+      },
+      {
+        "type": "create",
+        "path": "leaflet",
+        "value": [{
+          "name": "Stamen Toner Lite",
+          "thumbnail": "/assets/img/Stamen_TonerLite.png",
+          "urlTemplate": "http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png",
+          "attribution": "Map tiles by <a href=\"http://stamen.com\">Stamen Design</a>, <a href=\"http://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a> &mdash; Map data &copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a>",
+          "subdomains": null,
+          "id": null,
+          "accessToken": null,
+          "minZoom": 2,
+          "maxZoom": 20
+        }, {
+          "overlay": true,
+          "name": "Stamen Toner Lines",
+          "thumbnail": "",
+          "urlTemplate": "http://stamen-tiles-{s}.a.ssl.fastly.net/toner-lines/{z}/{x}/{y}.png",
+          "attribution": "Map tiles by <a href=\"http://stamen.com\">Stamen Design</a>, <a href=\"http://creativecommons.org/licenses/by/3.0\">CC BY 3.0</a> &mdash; Map data &copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a>",
+          "subdomains": "abcd",
+          "id": null,
+          "accessToken": null,
+          "minZoom": 2,
+          "maxZoom": 20
+        }, {
+          "name": "Esri World Gray Canvas",
+          "thumbnail": "/assets/img/Esri_WorldGrayCanvas.png",
+          "urlTemplate": "http://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}",
+          "attribution": "Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ",
+          "subdomains": null,
+          "id": null,
+          "accessToken": null,
+          "minZoom": 2,
+          "maxZoom": 16
+        }, {
+          "name": "OpenStreetMap B&W",
+          "thumbnail": "/assets/img/OpenStreetMap_BlackAndWhite.png",
+          "urlTemplate": "http://{s}.tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png",
+          "attribution": "&copy; <a href=\"http://osm.org/copyright\">OpenStreetMap</a>",
+          "subdomains": null,
+          "id": null,
+          "accessToken": null,
+          "minZoom": 2,
+          "maxZoom": 18
+        }, {
+          "name": "CartoDB Positron",
+          "thumbnail": "/assets/img/CartoDB_Positron.png",
+          "urlTemplate": "http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png",
+          "attribution": "&copy; <a href=\"http://www.openstreetmap.org/copyright\">OpenStreetMap</a> &copy; <a href=\"http://cartodb.com/attributions\">CartoDB</a>",
+          "subdomains": "abcd",
+          "id": null,
+          "accessToken": null,
+          "minZoom": 2,
+          "maxZoom": 19
+        }, {
+          "name": "MapBox Light",
+          "thumbnail": "/assets/img/MapBox_Light.png",
+          "urlTemplate": "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
+          "attribution": "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a>, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery &copy <a href=\"http://mapbox.com\">Mapbox</a>",
+          "subdomains": null,
+          "id": "mapbox.light",
+          "accessToken": "pk.eyJ1Ijoic2hleW1hbm4iLCJhIjoiY2lqNGZmanhpMDAxaHc4bTNhZGFrcHZleiJ9.VliJNQs7QBK5e5ZmYl9RTw",
+          "minZoom": 2,
+          "maxZoom": 20
+        }, {
+          "name": "MapBox Streets",
+          "thumbnail": "/assets/img/MapBox_Streets.png",
+          "urlTemplate": "https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}",
+          "attribution": "Map data &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a>, <a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery &copy <a href=\"http://mapbox.com\">Mapbox</a>",
+          "subdomains": null,
+          "id": "mapbox.streets",
+          "accessToken": "pk.eyJ1Ijoic2hleW1hbm4iLCJhIjoiY2lqNGZmanhpMDAxaHc4bTNhZGFrcHZleiJ9.VliJNQs7QBK5e5ZmYl9RTw",
+          "minZoom": 2,
+          "maxZoom": 20
+        }, {
+          "name": "MapQuestOpen Aerial",
+          "thumbnail": "/assets/img/MapQuestOpen_Aerial.jpg",
+          "urlTemplate": "http://otile{s}.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg",
+          "attribution": "Tiles Courtesy of <a href=\"http://www.mapquest.com/\">MapQuest</a> &mdash; Portions Courtesy NASA/JPL-Caltech and U.S. Depart. of Agriculture, Farm Service Agency",
+          "subdomains": "1234",
+          "id": null,
+          "accessToken": null,
+          "minZoom": 2,
+          "maxZoom": 11
+        }]
+      }
+    ]
+  },
+  {
+    "version": "1.1.1",
+    "comment": "Changes since 1.1.0",
+    "changes": [
+      {"type": "create", "path": "access.widget", "value": true},
+      {"type": "create", "path": "server.certificatePassphrase", "value": null},
+      {"type": "create", "path": "sigma.settings.maxNodeLabelLineLength", "value": 35}
+    ]
+  },
+  {
+    "version": "1.0.1",
+    "comment": "Changes since 1.0.0",
+    "changes": [
+      {"type": "create", "path": "sigma.settings.legendBorderWidth", "value": 0.5},
+      {"type": "create", "path": "sigma.settings.legendBorderRadius", "value": 4},
+      {"type": "create", "path": "sigma.settings.legendBorderColor", "value": "#999999"}
+    ]
+  },
+  {
+    "version": "1.0.0",
+    "comment": "Changes introduced after 0.10.6",
+    "changes": [
+      {
+        "type": "create",
+        "path": "advanced.defaultFuzziness",
+        "value": 0.9
+      }
+    ]
+  },
+  {
+    "version": "0.10.6",
+    "comment": "Changes introduced after 0.10.5",
+    "changes": [
+      {
+        "type": "create",
+        "path": "access.msActiveDirectory",
+        "value": {
+          "enabled": false,
+          "url": "ldap://example.com",
+          "baseDN": "dc=example,dc=com",
+          "domain": "example.com"
+        }
+      },
+      {
+        "type": "create",
+        "path": "auditTrail",
+        "value": {
+          "enabled": false,
+          "logFolder": "audit-trail",
+          "fileSizeLimit": 5242880,
+          "logResult": false,
+          "strictMode": false,
+          "mode": "rw"
+        }
+      }
+    ]
+  },
+  {
+    "version": "0.10.4",
+    "comment": "Changes introduced after 0.10.3",
+    "changes": [
+      {"type": "delete", "path": "sigma.settings.dragNodeStickiness"},
+      {"type": "create", "path": "sigma.settings.nodeHaloClustering", "value": false},
+      {"type": "rename", "path": "sigma.styles.nodes.color.linkurious_categories", "newKey": "categories"},
+      {"type": "rename", "path": "sigma.palette.nodes.qualitative.linkurious_categories", "newKey": "categories"},
+      {"type": "rename", "path": "sigma.palette.nodes.icons.linkurious_categories", "newKey": "categories"},
+      {"type": "rename", "path": "server.cookieDomain", "newKey": "domain"}
+    ]
+  },
+  {
+    "version": "0.10.2",
+    "comment": "Changes introduced after 0.10.1",
+    "changes": [
+      {"type": "delete", "path": "dataSources.*.index.indexName"}
+    ]
+  }
+]
