@@ -103,41 +103,7 @@ def index(request):
 	return render(request,"dashboard.html",context)
 
 
-def datatab(request):
-	context={}
-	channels = ChannelToListen.objects.all().order_by("id")
-	chaines=[]
-	for i in channels:
-		with conection.cursor() as cursor:
-			cursor.execute("""SELECT COUNT(*) FROM dashboard_comment WHERE "channelId"='{}' """.format(i.channelId))
-			row = cursor.fetchall()
-		nbcomments= row[0][0]
-		with conection.cursor() as cursor:
-			cursor.execute("""SELECT COUNT(*) FROM dashboard_userfeature WHERE "channelId"='{}' AND "timeStamp"='{}' """.format(i.channelId,i.listeningTime))
-			row = cursor.fetchall()
-		nbliens= row[0][0]
-		with conection.cursor() as cursor:
-			cursor.execute("""SELECT COUNT(*)FROM dashboard_video WHERE "channelId"='{}' """.format(i.channelId))
-			row = cursor.fetchall()
-		nbvideos= row[0][0]
 
-		#print(len(list(Comment.objects.filter(channelId=i.channelId))))
-		#chaines.append({
-		#'nbcomments':len(list(Comment.objects.filter(channelId=i.channelId))),
-		#'nbvideos':len(list(Video.objects.filter(channelId=i.channelId))),
-		#'nbliens':len(list(UserLink.objects.filter(channelId=i.channelId)))})
-
-		chaines.append({
-			'nbcomments':nbcomments,
-			'nbvideos':nbvideos,
-			'nbliens':nbliens
-
-
-			})
-	
-	context["chaines"]=chaines
-
-	return JsonResponse(context)
 
 
 def videosCommentees(request):

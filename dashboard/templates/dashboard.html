@@ -181,43 +181,6 @@
 
 
 
-  <script>
-    
-
-
-
-
-    function update_data(){
-      $.get("http://127.0.0.1:8000/datatab",retour_update);
-    }
-
-    function retour_update(reponse){
-
-      chaines=reponse.chaines
-      a = $("tr");
-      //console.log(a.length);
-      //console.log(chaines);
-      for(var i = 1; i < a.length;i=i+1){
-        var p = $(a[i]);
-        //console.log(a[i]);
-        var tds = p.find("td");
-        //console.log(chaines[i-1]["nbvideos"]);
-        $(tds[2]).text(chaines[i-1]["nbvideos"]);
-        $(tds[3]).text(chaines[i-1]["nbcomments"]);
-        $(tds[4]).text(chaines[i-1]["nbliens"]);
-        //console.log(tds);
-      }
-      setTimeout(update_data,1000);
-    };
-
-
-    update_data();
-
-
-
-
-  </script>
-
 
 
 

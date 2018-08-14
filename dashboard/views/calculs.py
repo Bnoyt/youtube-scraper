@@ -36,33 +36,122 @@ NB_PROC_MAX = 60
 
 django.setup() # Must call setup
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) # Répertoire du projet
 
 def getGoogleKey():
+	"""
+	Fonction qui renvoie une clé d'API aléaoirement parmi le set de clés d'API enregistrées dans la base de données
+	"""
 	return GoogleKey.objects.all().order_by('?')[0].value
-	#if len(a) == 0:
-	#	return getGoogleKey()
-	#else:
-		#print(len(a))
-	#	return a[0].value
+
 
  
-def to_xml(df, filename=None, mode='wb'):
-    def row_to_xml(row):
-        xml = ['<item>']
-        for i, col_name in enumerate(row.index):
-            xml.append('  <field name="{0}">{1}</field>'.format(col_name, row.iloc[i]))
-        xml.append('</item>')
-        return '\n'.join(xml)
-    res = '\n'.join(df.apply(row_to_xml, axis=1)).encode("utf-8")
+def aplatir(dic):
+	"""
+	Aplatir une liste de listes rapidement
+	"""
+	A = []
+	for d in dic:
+		for k in d:
+			A.append(k)
+	return A
 
-    if filename is None:
-        return res
-    with open(filename, mode) as f:
-        f.write(res)
+
+
+def clean_coms(coms,channelId):
+	"""
+	Formate le résultat renvoyé par l'API de google pour l'exploiter plus simplement dans le reste du projet
+
+	"""
+	A = []
+	for c in coms:
+		try:
+			A.append({"id":c["id"],
+					"kind":c["kind"],
+					"authorId":c["snippet"]["authorChannelId"]["value"],
+					"authorName":c["snippet"]["authorDisplayName"],
+					"likeCount":c["snippet"]["likeCount"],
+					"parentId":c["snippet"]["parentId"],
+					"publishedAt":c["snippet"]["publishedAt"],
+					"textDisplay":c["snippet"]["textDisplay"],
+					"textOriginal":c["snippet"]["textOriginal"],
+					"updatedAt":c["snippet"]["updatedAt"],
+					"videoId":"nan",
+					"channelId":"nan"})
+		except KeyError:
+			A.append({"id":c["id"],
+					"kind":c["kind"],
+					"authorId":c["snippet"]["topLevelComment"]["snippet"]["authorChannelId"]["value"],
+					"authorName":c["snippet"]["topLevelComment"]["snippet"]["authorDisplayName"],
+					"likeCount":c["snippet"]["topLevelComment"]["snippet"]["likeCount"],
+					"parentId":c["snippet"]["topLevelComment"]["id"],
+					"publishedAt":c["snippet"]["topLevelComment"]["snippet"]["publishedAt"],
+					"textDisplay":c["snippet"]["topLevelComment"]["snippet"]["textDisplay"],
+					"textOriginal":c["snippet"]["topLevelComment"]["snippet"]["textOriginal"],
+					"updatedAt":c["snippet"]["topLevelComment"]["snippet"]["updatedAt"],
+					"videoId":c["snippet"]["videoId"],
+					"channelId":channelId,
+					"replyCount":c["snippet"]["totalReplyCount"]})
+
+	return A
+
+
+def save_coms(coms):
+	"""
+	À partir d'une lite de commentaires formatée par la fonction défninie précédemment, décide s'il faut mettre à jour, et met à jour la base de données de commentaires
+	
+	"""
+	for comment in coms:
+
+		replieshasChanged=True
+
+		if not(User.objects.filter(userId=comment["authorId"],channelId=comment["channelId"]).exists()):
+			user = User(userId=comment["authorId"],userName=comment["authorName"],channelId=comment["channelId"])
+			user.save()
+		else:
+			user = User.objects.filter(userId=comment["authorId"],channelId=comment["channelId"])[0]
+
+		if not(Comment.objects.filter(commentId=comment["id"]).exists()):
+			c = Comment(commentId=comment["id"],author=user,kind=comment["kind"],likeCount=int(comment["likeCount"]),publishedAt=comment["publishedAt"],updatedAt=comment["updatedAt"],textOriginal=comment["textOriginal"],textDisplay=comment["textDisplay"],videoId=comment["videoId"],channelId=comment["channelId"])
+			c.save()
+			treat_comment(c)
+			if comment["videoId"] == "nan":
+				replieshasChanged=False
+				if Comment.objects.filter(commentId=comment["parentId"]).exists():
+					pere = Comment.objects.filter(commentId=comment["parentId"])[0]
+					c.parentCom=pere
+					c.videoId=pere.videoId
+					c.channelId=pere.channelId
+					c.save()
+					treat_comment(c)
+				else:
+					c.delete()
+		else:
+			c = Comment.objects.get(commentId=comment["videoId"])
+			replieshasChanged = (True)
+			c.commentId=c.comment["id"]
+			c.author=user
+			c.kind=comment["kind"]
+			c.likeCount=int(comment["likeCount"])
+			c.publishedAt=comment["publishedAt"]
+			c.updatedAt=comment["updatedAt"]
+			c.textOriginal=comment["textOriginal"]
+			c.textDisplay=comment["textDisplay"]
+			c.videoId=comment["videoId"]
+			c.channelId=comment["channelId"]
+			c.save()
+			treat_comment(c)
+
+		if replieshasChanged:
+			all_comments(parent_id=c.commentId)
+
 
 
 def comments(video_id=None,token=None,parent_id=None,channel_id=None):
+	"""
+	Récupérer une page de commentaires selon les paramètres demandés
+	"""
+
 	debut = "https://www.googleapis.com/youtube/v3/commentThreads?key="
 	if token==None:
 		token=""
@@ -87,50 +176,59 @@ def comments(video_id=None,token=None,parent_id=None,channel_id=None):
 	else:
 		channel_id = "&allThreadsRelatedToChannelId=" + channel_id	
 
-	#print(debut + getGoogleKey() + "&textFormat=plainText&maxResults=100&part=snippet,id" + channel_id + video_id + token + parent_id)		
-
 	r = requests.get(debut + getGoogleKey() + "&textFormat=plainText&maxResults=100&part=snippet,id" + channel_id + video_id + token + parent_id).json()
 	return r
 
-def aplatir(dic):
-	A = []
-	for d in dic:
-		for k in d:
-			A.append(k)
-	return A
- 
-"""
+
+
+
+
+
 def all_comments(video_id=None,parent_id=None,channel_id=None):
-	r = comments(video_id=video_id,parent_id=parent_id,channel_id=channel_id)
-	#print(r)
-	T = [r["items"]]
-	save_coms(clean_coms(T[-1]))
-	t = 0
-	while t < 100:
-		try:
-			r = comments(video_id=video_id,token=r["nextPageToken"],parent_id=parent_id,channel_id=channel_id)
-			T.append(r["items"])
-			save_coms(clean_coms(T[-1]))
-			t += 1
-			#print(t)
-		except KeyError:
-			break
-	return aplatir(T)
-"""
+
+	"""
+	Récupérer tous les commentaires selon les paramètres données en entrée
+
+	"""
+
+	r = comments(video_id=video_id,parent_id=parent_id,channel_id=None)
+	try:
+		save_coms(clean_coms(r["items"],channel_id))
+
+		while True:
+			try:
+				r = comments(video_id=video_id,token=r["nextPageToken"],parent_id=parent_id,channel_id=None)
+				
+				save_coms(clean_coms(r["items"],channel_id))
+			except KeyError:
+				break
+	except KeyError:
+		return None
+
+
+
+
+
+
+
 
 def all_comments_and_replies(video_id=None,channel_id=None):
+	"""
+	Récupérer tous les commentaires ainsi que les réponses à ces commentaires
+	"""
 	a = all_comments(video_id=video_id,channel_id=channel_id)
 	r = []
 	t = 0
 	for i in a:
 		if i["snippet"]["totalReplyCount"] > 0:
-			t+=1
-			#print(t)
 			r += all_comments(parent_id = i["id"])
 	return a+r
 
 
 def videos(channel_id=None,token=None,query=None):
+	"""
+	Récupérer une page de vidéos telle que renvoyée par l'API de Google
+	"""
 	if token==None:
 		token=""
 	else:
@@ -145,11 +243,13 @@ def videos(channel_id=None,token=None,query=None):
 	
 	r = requests.get("https://www.googleapis.com/youtube/v3/search?key=" + getGoogleKey() + channel_id + token + query + "&part=snippet,id&maxResults=50").json()
 
-	#save_videos(r["items"])
 
 	return r
 
 def all_videos(channel_id=None,query=None,max_videos=1000):
+	"""
+	Récupère toutes les pages de vidéos
+	"""
 	r = videos(channel_id=channel_id,query=query)
 	#print(r)
 	while 'error' in r:
@@ -167,7 +267,7 @@ def all_videos(channel_id=None,query=None,max_videos=1000):
 			break
 	return aplatir(T)
 
-def traiter(Q):
+def all_coms_channel_pool(Q):
 	A = []
 	t = 1
 	n = 0
@@ -192,6 +292,9 @@ def traiter(Q):
 
 
 def all_coms_channel(nprocs,channel_id):
+	"""
+	Récupère la liste des commentaires postés sur les vidéos d'une chaine donnée en paramètre
+	"""
 	dd = all_videos(channel_id)
 	S = []
 	nombre = len(dd)
@@ -202,53 +305,25 @@ def all_coms_channel(nprocs,channel_id):
 	
 	pool = mp.Pool(processes=nprocs)
 	
-	A = aplatir(pool.map(traiter, S))
-	
-
-
+	A = aplatir(pool.map(all_coms_channel_pool, S))
 
 
 	return clean_coms(A)
 
 
-def clean_coms(coms,channelId):
-	A = []
-	for c in coms:
-		#print(c)
-		try:
-			A.append({"id":c["id"],
-					"kind":c["kind"],
-					"authorId":c["snippet"]["authorChannelId"]["value"],
-					"authorName":c["snippet"]["authorDisplayName"],
-					"likeCount":c["snippet"]["likeCount"],
-					"parentId":c["snippet"]["parentId"],
-					"publishedAt":c["snippet"]["publishedAt"],
-					"textDisplay":c["snippet"]["textDisplay"],
-					"textOriginal":c["snippet"]["textOriginal"],
-					"updatedAt":c["snippet"]["updatedAt"],
-					"videoId":"nan",
-					"channelId":"nan"})
-		except KeyError:
-			#try:
-			A.append({"id":c["id"],
-					"kind":c["kind"],
-					"authorId":c["snippet"]["topLevelComment"]["snippet"]["authorChannelId"]["value"],
-					"authorName":c["snippet"]["topLevelComment"]["snippet"]["authorDisplayName"],
-					"likeCount":c["snippet"]["topLevelComment"]["snippet"]["likeCount"],
-					"parentId":c["snippet"]["topLevelComment"]["id"],
-					"publishedAt":c["snippet"]["topLevelComment"]["snippet"]["publishedAt"],
-					"textDisplay":c["snippet"]["topLevelComment"]["snippet"]["textDisplay"],
-					"textOriginal":c["snippet"]["topLevelComment"]["snippet"]["textOriginal"],
-					"updatedAt":c["snippet"]["topLevelComment"]["snippet"]["updatedAt"],
-					"videoId":c["snippet"]["videoId"],
-					"channelId":channelId,
-					"replyCount":c["snippet"]["totalReplyCount"]})
-		#except KeyError:
-			#	print(c)
-	return A
+def updateComs(videoId,channelId):
+	"""
+
+	Met à jour les commentaires d'une vidéo depuis le pool
+	"""
+	return all_comments(video_id=videoId,channel_id=channelId)
+
 
 
 def get_videos(publishedAfter=None,publishedBefore=None,channelId=None,location=None,locationRadius=None,words=None,regionCode=None,relevanceLanguage=None,topicId=None,max_videos=1000):
+	"""
+	Récupère une page de vidéo renvoyée par l'API en mode recherche
+	"""
 	if publishedAfter==None:
 		publishedAfter = ""
 	else:
@@ -301,6 +376,9 @@ def get_videos(publishedAfter=None,publishedBefore=None,channelId=None,location=
 
 
 def video(video_id):
+	"""
+	Récupère les métadonnées d'une vidéo depuis l'API
+	"""
 	r = requests.get("https://www.googleapis.com/youtube/v3/videos?key=" + getGoogleKey() + "&id="+video_id +   "&part=snippet,id,topicDetails,contentDetails,recordingDetails,statistics,status").json()
 	print("https://www.googleapis.com/youtube/v3/videos?key=" + getGoogleKey() + "&id="+video_id +   "&part=snippet,id,topicDetails,contentDetails,recordingDetails,statistics,status")
 	return r
@@ -314,64 +392,12 @@ def video(video_id):
 
 
 
-def save_coms(coms):
-	for comment in coms:
-
-		replieshasChanged=True
-
-		if not(User.objects.filter(userId=comment["authorId"],channelId=comment["channelId"]).exists()):
-			user = User(userId=comment["authorId"],userName=comment["authorName"],channelId=comment["channelId"])
-			user.save()
-		else:
-			user = User.objects.filter(userId=comment["authorId"],channelId=comment["channelId"])[0]
-
-		if not(Comment.objects.filter(commentId=comment["id"]).exists()):
-			c = Comment(commentId=comment["id"],author=user,kind=comment["kind"],likeCount=int(comment["likeCount"]),publishedAt=comment["publishedAt"],updatedAt=comment["updatedAt"],textOriginal=comment["textOriginal"],textDisplay=comment["textDisplay"],videoId=comment["videoId"],channelId=comment["channelId"])
-			c.save()
-			treat_comment(c)
-			if comment["videoId"] == "nan":
-				replieshasChanged=False
-				if Comment.objects.filter(commentId=comment["parentId"]).exists():
-					pere = Comment.objects.filter(commentId=comment["parentId"])[0]
-					c.parentCom=pere
-					c.videoId=pere.videoId
-					c.channelId=pere.channelId
-					c.save()
-					treat_comment(c)
-				else:
-					c.delete()
-		else:
-			c = Comment.objects.get(commentId=comment["videoId"])
-			replieshasChanged = (True)
-			c.commentId=c.comment["id"]
-			c.author=user
-			c.kind=comment["kind"]
-			c.likeCount=int(comment["likeCount"])
-			c.publishedAt=comment["publishedAt"]
-			c.updatedAt=comment["updatedAt"]
-			c.textOriginal=comment["textOriginal"]
-			c.textDisplay=comment["textDisplay"]
-			c.videoId=comment["videoId"]
-			c.channelId=comment["channelId"]
-			c.save()
-			treat_comment(c)
-
-		if replieshasChanged:
-			all_comments(parent_id=c.commentId)
-
-
-
-
-
-
-
-
-
-
-
-
 
 def save_video(result):
+	"""
+	Prend en entrée l'Id d'une vidéo tel que renvoyée par l'API en mode recherche, et sauvegarde les métadonnées de cette vidéo
+	le formatage de result doit être tel que video_id=result["id"]["videoId"]
+	"""
 
 	video_id=result["id"]["videoId"]
 	json=video(video_id)
@@ -463,29 +489,11 @@ def save_video(result):
 
 
 
-def all_comments(video_id=None,parent_id=None,channel_id=None):
-	r = comments(video_id=video_id,parent_id=parent_id,channel_id=None)
-	try:
-		save_coms(clean_coms(r["items"],channel_id))
-
-		while True:
-			try:
-				r = comments(video_id=video_id,token=r["nextPageToken"],parent_id=parent_id,channel_id=None)
-				
-				save_coms(clean_coms(r["items"],channel_id))
-			except KeyError:
-				break
-		#print(video_id)
-	except KeyError:
-		#print(video_id)
-		return None
-
-
-def updateComs(videoId,channelId):
-	return all_comments(video_id=videoId,channel_id=channelId)
-
 
 def update_vid(l):
+	"""
+	Met à jour les métadonnées et les commentaires d'une vidéo
+	"""
 	try:
 		for name, info in django.db.connections.databases.items(): # Close the DB connections
 			django.db.connection.close()
@@ -503,6 +511,10 @@ def update_vid(l):
 
 
 def update_vids(l):
+	"""
+	Met à jour une liste de vidéo dans le pool
+
+	"""
 	for i in l:
 		update_vid(i)
 
@@ -510,29 +522,15 @@ def update_vids(l):
 
 
 
-def calculFeatures(channelId):
-	#ls = ChannelToListen.objects.get(channelId=channelId)
-	print("Features utilisateurs...")
-	#calculVideosCommentees(channelId)
-	#userLinks(channelId)
-	print("Features videos...")
-	#videoLinks(channelId)
 
-	#averageUserVideoCount(channelId)
-	videoGraph,videoTab,videoDic = createVideoGraph(channelId=channelId)
-	userGraph,userTab,userDic = createUserGraph(channelId=channelId)
-	date = datetime.datetime.now()
-	c = ChannelToListen.objects.get(channelId=channelId)
-	c.listeningTime = str(date)
-	c.save()	
-
-	calculUserFeatures(channelId,userGraph,userTab,userDic,date)
-	calculVideoFeatures(channelId,videoGraph,videoTab,videoDic,date)
 
 
  
 def save_channel(channelId):
-	c = get_object_or_404(ChannelToListen,channelId=channelId)
+	"""
+	Sauvegarde les métadonnées d'une chaine
+	"""
+	c = get_object_or_404(Channel,channelId=channelId)
 	r = requests.get("https://www.googleapis.com/youtube/v3/channels?key="+ getGoogleKey() + "&part=snippet,id,topicDetails,contentDetails,statistics,status&id=" + str(channelId)).json()
 	items=r["items"]
 	c.description=items[0]["snippet"]["description"].replace("\n"," ").replace("\r"," ").replace(","," ").replace("\t"," ").replace('"'," ")
@@ -546,9 +544,12 @@ def save_channel(channelId):
  
  
 def updateChannel(channelId):
+	"""
+	Met à jour une chaine
+	"""
 	
 	save_channel(channelId=channelId)
-	c = get_object_or_404(ChannelToListen,channelId=channelId)
+	c = get_object_or_404(Channel,channelId=channelId)
 	if c.listening==True:
 		return None
 	else:
@@ -610,21 +611,23 @@ def updateChannel(channelId):
 
 
 def updateAll(request):
-	for c in ChannelToListen.objects.all():
+	"""
+	Met à jour toutes les chaines enregistrées dans la BDD
+	"""
+	for c in Channel.all():
 		updateChannel(c.channelId)
 
 	#channelLinks()
 	return HttpResponse("c'est bon")
 
 
-def successful(r):
-	try:
-		t = r.successful()
-	except AssertionError:
-		t = False
-	return t
 
 def startSearch(keywords,nbvideos,date):
+
+	"""
+	Lance une recherche selon les pramètres donnés en entrée
+	"""
+
 	nbvideos=int(nbvideos)
 	date = date.split("/")
 	print(date)
@@ -652,42 +655,17 @@ def startSearch(keywords,nbvideos,date):
 
 
 
-	"""
-		continu = True
-		while continu:
-			print(i)
 
-			pool = mp.Pool(processes=NB_PROC_MAX)
-			print("starting pool...")
-			r = pool.map_async(update_vid,vids[i*NB_PROC_MAX:(i+1)*NB_PROC_MAX])
-			print(i)
-			
-			t0 = time()
-			ttt = successful(r)
-			while (time()-t0) < 40 and ttt==False:
-				ttt = successful(r)
-				print(ttt)
-				sleep(1)
-			if ttt==False:
-				print("terminate")
-				pool.terminate()
-				continu=True
-			if ttt:
-				print(ttt)
-				print("wait")
-				print(successful(r))
-				print("closing..")
-				pool.terminate() 
-				continu = False
-			
-			pool.join() 
-	"""
 
 	t3 = time()
 	print(t3-t2)
 
 
 def saveSearch(searchId):
+
+	"""
+	Sauvegarde en csv le résultat d'une recherche et renvoie l'Id de la sauvegarde
+	"""
 
 	videoReq = """ SELECT dashboard_video.id,dashboard_video."videoId",dashboard_video."publishedAt",dashboard_video."channelId",dashboard_video."title",dashboard_video."description",dashboard_video."categoryId",dashboard_video."defaultLanguage",dashboard_video.duration,dashboard_video.definition,dashboard_video."viewCount",dashboard_video."likeCount",dashboard_video."dislikeCount",dashboard_video."favoriteCount",dashboard_video."commentCount",dashboard_relationvideosearch.search_id from dashboard_video INNER JOIN dashboard_relationvideosearch ON dashboard_video."videoId" = dashboard_relationvideosearch."videoId" WHERE dashboard_relationvideosearch.search_id = {} """.format(searchId)
 
@@ -716,24 +694,6 @@ def saveSearch(searchId):
 	where dashboard_relationvideosearch.search_id = {} """.format(searchId)
 
 
-	"""
-	for v in Video.objects.all():
-		
-		
-		treat_video(v)
-		v.title = v.title.replace("\n"," ").replace("\r"," ").replace(","," ").replace("\t"," ").replace('"'," ")
-		v.save()
-
-	A = 0
-	N = len(Comment.objects.all())
-	for c in Comment.objects.all():
-		A += 1
-		print("État d'avancement : {} / {}".format(A,N))
-		
-
-		
-		treat_comment(c)
-	"""
 	date = datetime.datetime.now()
 
 
@@ -806,6 +766,11 @@ def saveSearch(searchId):
 
 
 def importNeo4J(searchId):
+	"""
+
+	Lance la sauvegarde d'une recherche et exporte les résultats dans Neo4J
+
+	"""
 	chemin = saveSearch(searchId)
 
 	print("Sauvegarde terminée")
@@ -973,6 +938,9 @@ def importNeo4J(searchId):
 
 
 def lookForVideo(videoId):
+	"""
+	Récupère les données d'une vidéo si elle n'est pas encore sauvegardée dans la BDD
+	"""
 	b = Video.objects.filter(videoId=videoId).exists()
 	if b:
 		return True

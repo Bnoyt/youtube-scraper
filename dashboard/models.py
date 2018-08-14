@@ -59,30 +59,7 @@ class Channel(models.Model):
 		return self.name
 
 
-class VideoToListen(models.Model):
-	name=models.CharField(max_length=100)
-	videoId=models.CharField(max_length=100)
 
-	def __str__(self):
-		return self.name
-
-class UserLink(models.Model):
-	source = models.CharField(max_length=100)
-	target = models.CharField(max_length=100)
-	weight = models.IntegerField()
-	channelId=models.CharField(max_length=100,default="nan")
-
-
-class VideoLink(models.Model):
-	source = models.CharField(max_length=100)
-	target = models.CharField(max_length=100)
-	weight = models.IntegerField()
-	channelId=models.CharField(max_length=100,default="nan")
-
-class ChannelLink(models.Model):
-	source = models.CharField(max_length=100)
-	target = models.CharField(max_length=100)
-	weight = models.IntegerField()
 
 
 
@@ -109,36 +86,7 @@ class Video(models.Model):
 		return self.title
 
 
-class VideoFeature(models.Model):
-	channelId=models.CharField(max_length=100)
-	videoId=models.CharField(max_length=100)
-	timeStamp=models.DateTimeField()
-	viewCount=models.IntegerField(default=0)
-	likeCount=models.IntegerField(default=0)
-	dislikeCount=models.IntegerField(default=0)
-	favoriteCount=models.IntegerField(default=0)
-	commentCount=models.IntegerField(default=0)
-	pageRank = models.FloatField(default=0)
-	weightedDegree = models.IntegerField(default=0)
-	usersPower=models.IntegerField(default=0)
 
-
-class UserFeature(models.Model):
-	userId=models.CharField(max_length=100,default="nan")
-	channelId=models.CharField(max_length=100)
-	description=models.TextField(default="")
-	creationTime=models.DateTimeField()
-	timeStamp=models.DateTimeField()
-	viewCount=models.IntegerField(default=0)
-	subscriberCount=models.IntegerField(default=0)
-	commentersCount=models.IntegerField(default=0)
-	videoCount=models.IntegerField(default=0)
-	commentsCount=models.IntegerField(default=0)
-	pageRank=models.FloatField(default=0)
-	weightedDegree = models.IntegerField(default=0)
-	betweennessCentrality=models.FloatField(default=0)
-	nbLikes=models.IntegerField(default=0)
-	nbvideoscommentees=models.IntegerField(default=0)
 
 
 class Search(models.Model):
@@ -155,22 +103,6 @@ class RelationChannelSearch(models.Model):
 	chosen=models.BooleanField()
 
 
-class ChannelFeature(models.Model):
-	channelId=models.CharField(max_length=100)
-	description=models.TextField(default="")
-	creationTime=models.DateTimeField()
-	timeStamp=models.DateTimeField()
-	viewCount=models.IntegerField(default=0)
-	subscriberCount=models.IntegerField(default=0)
-	commentersCount=models.IntegerField(default=0)
-	videoCount=models.IntegerField(default=0)
-	commentsCount=models.IntegerField(default=0)
-	pageRank=models.FloatField(default=0)
-	weightedDegree = models.IntegerField(default=0)
-	betweennessCentrality=models.FloatField(default=0)
-	nbLikes=models.IntegerField(default=0)
-	nbvideoscommentees=models.IntegerField(default=0)
-	search=models.ForeignKey(Search,null=True)
 
 
 class VideoDescHyperLink(models.Model):

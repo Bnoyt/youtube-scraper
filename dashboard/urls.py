@@ -6,7 +6,6 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^import/$', views.import_data, name='import'),
     url(r'^delete_all/$', views.delete_all, name='delete_all'),
-    url(r'^datatab/$', views.datatab, name='datatab'),
     url(r'^calcul_videos_commentees/$', views.videosCommentees, name='calcul_videos_commentees'),
 	url(r'^calcul_liens/$', views.liens, name='calcul_liens'),
 	url(r'^autoconfig/$', views.autoconfig, name='autoconfig'),
