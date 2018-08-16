@@ -911,11 +911,7 @@ def importNeo4J(searchId):
 		CREATE (u1)-[l:userLink]->(u2)
 		SET l.Weight=1""",
 
-		"""CALL algo.pageRank('User', 'userLink', {write:true,iterations:20,writeProperty:'hierarchicPageRank'});""",
-
-		"""CALL algo.pageRank('Video', 'videoTopicLink', {write:true,iterations:20,writeProperty:'videoTopicPageRank'});""",
-
-		"""CALL algo.pageRank('Topic', 'topicLink', {write:true,iterations:20,writeProperty:'topicPageRank'})"""
+		
 
 		]
 
@@ -950,6 +946,7 @@ def lookForVideo(videoId):
 		result={"id":{"videoId":videoId}}
 		update_vid([result,channelId])
 		return True
+
 
 
 

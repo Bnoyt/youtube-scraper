@@ -143,6 +143,9 @@
                       <th>
                         État de la recherche
                       </th>
+                      <th>
+                        Supprimer la recherche
+                      </th>
                     </thead>
                     <tbody>
                      
@@ -155,8 +158,14 @@
                           {{s.nbvideosvues}}
                         </td>
                         <td>
+                          <div class="progress-bar" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="width: 10%;">
+                            <span class="progress-value">10%</span>
+                          </div>
                           <a href="{% url 'export_neo4j' %}?id={{s.search.id}}" target="blank" class="btn btn-primary">Ouvrir la recherche dans Neo4J</a>
                           <a href="{% url 'detect_topics' %}?id={{s.search.id}}" class="btn btn-primary">Thèmes principaux de la recherche</a>
+                        </td>
+                        <td>
+                          <a href="{% url 'delete_search' %}?id={{s.search.id}}" class="btn btn-primary"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px" height="32px" viewBox="0 0 32 32" stroke-width="2"><g stroke-width="2" transform="translate(0, 0)"><polyline fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="27,10 27,31 5,31 5,10 " stroke-linejoin="miter"></polyline> <line data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="16" y1="15" x2="16" y2="25" stroke-linejoin="miter"></line> <line data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="11" y1="15" x2="11" y2="25" stroke-linejoin="miter"></line> <line data-color="color-2" fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="21" y1="15" x2="21" y2="25" stroke-linejoin="miter"></line> <polyline fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" points="11,6 11,1 21,1 21,6 " stroke-linejoin="miter"></polyline> <line fill="none" stroke="#444444" stroke-width="2" stroke-linecap="square" stroke-miterlimit="10" x1="30" y1="6" x2="2" y2="6" stroke-linejoin="miter"></line></g></svg></a>
                         </td>
 
                       
@@ -199,6 +208,43 @@
     <script src="{% static 'assets/js/plugins/bootstrap-datepicker.js' %}" type="text/javascript"></script>
   <!-- Control Center for Now Ui Kit: parallax effects, scripts for the example pages etc -->
   <script src="{% static 'assets/js/now-ui-kit.js' %}" type="text/javascript"></script>
+
+
+   <script>
+      
+
+
+
+
+      function update_data(){
+        $.get("{% url 'etat_recherche' %}",retour_update);
+      }
+
+      function retour_update(reponse){
+
+        chaines=reponse.result;
+        a = $(".progress-bar");
+        console.log(a.length);
+        console.log(chaines);
+        for(var i = 0; i < a.length;i=i+1){
+          var p = $(a[i]);
+          console.log(a[i]);
+          p.css('width', chaines[i] + '%');
+          p.attr('aria-valuenow',chaines[i-1]);
+          span = p.find("span");
+          $(span).text(chaines[i] + '%');
+          //console.log(tds);
+        }
+        setTimeout(update_data,1000);
+      };
+
+
+      update_data();
+
+
+
+
+    </script>
 
 
 

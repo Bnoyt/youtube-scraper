@@ -228,3 +228,32 @@ def detect_videotopics(request):
 
 def videosearch(request):
 	return render(request,"videosearch.html")
+
+
+def etat_recherche(request):
+	with conection.cursor() as cursor:
+		cursor.execute("""SELECT search_id,COUNT("videoId") FROM dashboard_relationvideosearch
+						GROUP BY search_id
+						ORDER BY search_id ASC""")
+		row = cursor.fetchall()
+	total = {}
+	for i in row:
+		total[i[0]] = i[1]
+
+	with conection.cursor() as cursor:
+		cursor.execute("""SELECT dashboard_relationvideosearch.search_id,COUNT(*) FROM dashboard_video
+						INNER JOIN dashboard_relationvideosearch ON dashboard_relationvideosearch."videoId" = dashboard_video."videoId"
+						GROUP BY dashboard_relationvideosearch.search_id
+						ORDER BY dashboard_relationvideosearch.search_id ASC""")
+		row = cursor.fetchall()
+	result = []
+	for i in row:
+		result.append(int(100* i[1] / total[i[0]]))
+
+	return JsonResponse({"result":result})
+
+def delete_search(request):
+	iid = request.GET["id"]
+	search = get_object_or_404(Search,pk=int(iid))
+	search.delete()
+	return HttpResponseRedirect(reverse("search"))

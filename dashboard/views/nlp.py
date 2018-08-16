@@ -130,6 +130,52 @@ def texttokens(texts):
 
 
 
+def textTopicsExtraction(args):
+	"""
+	Autre méthode d'extraction de topics
+
+	"""
+	texts=args["description"]
+	videos = args["videoId"]
+
+	
+	tfidf = TfidfVectorizer(sublinear_tf=True, min_df=5, norm='l2', encoding='latin-1', ngram_range=(1, 2), stop_words=stop_words_fr)
+
+	print("calcul NLP...")
+
+	features = tfidf.fit_transform(texts.values.astype('U')).toarray()
+
+	words = tfidf.get_feature_names()
+	videoMatrix=np.dot(features,np.transpose(features))
+	wordMatrix = np.dot(np.transpose(features),features)
+	videoTopicLinks=[]
+	wordLinks=[]
+
+	print("videoTopicLinks...")
+
+	for i in range(len(videoMatrix)):
+		for j in range(len(videoMatrix)):
+			if i != j and videoMatrix[i][j] > 0.2:
+				videoTopicLinks.append([videos[i],videos[j],videoMatrix[i][j]])
+	print(len(videoTopicLinks))
+	print("wordlinks...")
+
+	for i in range(len(wordMatrix)):
+		for j in range(len(wordMatrix)):
+			if i != j and wordMatrix[i][j] > 0.2:
+				wordLinks.append([i,j,wordMatrix[i][j]])
+
+	print(len(wordLinks))
+	print("words...")
+
+	for i in range(len(words)):
+		words[i] = [i,words[i]]
+
+	return words,videoTopicLinks,wordLinks
+
+
+
+
 def LDA_topicExtraction(texts):
 	"""
 	Extraction des topics avec l'algorithme LDA

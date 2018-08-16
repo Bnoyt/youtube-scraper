@@ -17,5 +17,7 @@ urlpatterns = [
 	url(r'^topics/$', views.detect_topics, name='detect_topics'),
 	url(r'^videotopics/$', views.detect_videotopics, name='detect_videotopics'),
 	url(r'^videosearch/$', views.videosearch, name='videosearch'),
+	url(r'^etat_recherche/$', views.etat_recherche, name='etat_recherche'),
+	url(r'^delete_search/$', views.delete_search, name='delete_search'),
 
 ]
