@@ -209,7 +209,9 @@ def detect_topics(request):
 def detect_videotopics(request):
 	video_id = request.GET['id']
 	a = lookForVideo(video_id)
-	video = get_object_or_404(Video,videoId=video_id)
+
+	video = Video.objects.filter(videoId=video_id)[0]
+
 	print("Récupération des textes...")
 	with conection.cursor() as cursor:
 		cursor.execute("""SELECT "commentId","textDisplay" FROM dashboard_comment  WHERE "videoId"='{}' """.format(video_id))

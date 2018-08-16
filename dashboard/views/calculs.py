@@ -505,9 +505,10 @@ def update_vid(l):
 			print(v["id"]["videoId"])
 		else:
 			print(v["id"]["videoId"])
-
 	except:
-		print('%s: %s' % (v["id"]["videoId"], traceback.format_exc()))
+		print("error")
+
+		
 
 
 def update_vids(l):
@@ -904,21 +905,46 @@ def importNeo4J(searchId):
 
 
 		"""MATCH (u1:User)-[:hasWritten]->(:Comment)-[:repliesTo]->(:Comment)<-[:hasWritten]-(u2:User)
-		CREATE (u1)-[l:userLink]->(u2)
+		CREATE (u1)-[l:tempUserLink]->(u2)
 		SET l.Weight=1""",
 
 		"""MATCH (u1:User)-[:hasWritten]->(:Comment)-[:commentToVideo]->(:Video)-[:videoPublishedBy]->(u2:User)
-		CREATE (u1)-[l:userLink]->(u2)
+		CREATE (u1)-[l:tempUserLink]->(u2)
 		SET l.Weight=1""",
 
-		
+		"""
+		MATCH (u1:User)-[l:tempUserLink]-(u2:User) with u1,u2,COUNT(l) as c
+		CREATE (u1)-[q:userLink]->(u2) SET q.weight = c
+		""",
+
+		"""
+		MATCH ()-[t:tempUserLink]->() delete t
+		""",
+
+		"""
+		MATCH (u:Tempuser) detach delete u
+		""",
+
+		"""
+		MATCH (u1:User)-[q:userLink]->(u2:User) with u2,SUM(q.weight) as cc 
+		SET u2.inDegree = cc
+		""",
+
+		"""
+		MATCH (u1:User)-[q:userLink]->(u2:User) with u1,SUM(q.weight) as cc 
+		SET u1.outDegree = cc
+		""",
+
+
+		"""
+		MATCH (u:User) WHERE u.outDegree=0 and u.inDegree=0 DETACH DELETE u
+		""",
+				
 
 		]
 
 
 	gdb = GraphDatabase("http://localhost:7474/db/data/")
-	for q in code:
-		print(q)
 	for q in code:
 		print(q)
 		gdb.query(q = q)
